@@ -24,11 +24,13 @@ function Login() {
             style={{ backgroundColor: "rgba(0,0,0,0.4)" }}
           ></div>
           <div className="flex items-center justify-between pt-3 md:pt-6 lg:pt-3 5xl:pt-4">
-            <img
-              className="h-16 opacity-90"
-              src="/home-stove-favicon.png"
-              alt="home stove logo"
-            />
+            <Link to={"/"}>
+              <img
+                className="h-16 opacity-90"
+                src="/home-stove-favicon.png"
+                alt="home stove logo"
+              />
+            </Link>
             <div className="flex justify-between items-center">
               <svg
                 className="opacity-90 hover:-translate-y-1 transition-transform cursor-pointer"
