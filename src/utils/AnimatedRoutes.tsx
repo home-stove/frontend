@@ -1,7 +1,6 @@
 import Home from '@/pages/Home/Home';
 import Login from '@/pages/Login/Login';
 import { AnimatePresence } from 'framer-motion';
-import React from 'react'
 import { Route, Routes, useLocation } from 'react-router-dom'
 
 function AnimatedRoutes() {

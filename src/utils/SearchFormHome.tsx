@@ -1,3 +1,5 @@
+import { ComboboxDemo } from "@/components/ui/combobox";
+
 type Props = {};
 
 // Search Form Home
@@ -29,19 +31,10 @@ function SearchFormHome({}: Props) {
           placeholder="What are you looking for?"
         />
       </div>
-      <div className="relative flex items-center px-5 h-9 mb-2">
-        <p className="text-black text-sm">Categories</p>
-        <svg
-          className="absolute right-0"
-          xmlns="http://www.w3.org/2000/svg"
-          width="1.5em"
-          height="1.5em"
-          viewBox="0 0 24 24"
-        >
-          <path fill="black" d="m7 10l5 5l5-5z"></path>
-        </svg>
+      <div className="relative flex items-center h-9 mb-2">
+        <ComboboxDemo />
       </div>
-      <div>
+      <div className="relative">
         <button className="w-full text-white text-sm font-semibold bg-[#5bbb7b] h-[3.25rem] rounded">
           Search
         </button>
