@@ -15,7 +15,7 @@ function Login() {
       <div className="lg:w-1/2">
         <div
           style={{
-            backgroundImage: `url(${"/src/assets/pexels-kseniachernaya-3952094.jpg"})`,
+            backgroundImage: `url(${"https://storagehomestovedev.blob.core.windows.net/web/login-page.jpg?sp=r&st=2024-08-20T12:36:44Z&se=2025-08-20T20:36:44Z&spr=https&sv=2022-11-02&sr=b&sig=7STTSkmbkj3%2BmBzIcQm7KfBheIlZIqkeO5mT6eYe7Lk%3D"})`,
           }}
           className="relative px-5 md:px-12 lg:px-5 5xl:px-8 h-[41vh] md:h-[42vh] lg:h-full lg:w-full bg-right bg-cover"
         >

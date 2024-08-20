@@ -1,5 +1,6 @@
 import Header from "@/utils/Header";
 import HeroSectionHome from "@/utils/HeroSectionHome";
+import JobsByCategorySectionHome from "@/utils/JobsByCategorySectionHome";
 
 function Home() {
   return (
@@ -9,10 +10,8 @@ function Home() {
       </div>
       {/* Hero Section */}
       <HeroSectionHome />
-      {/* Services Section */}
-      <div>
-        
-      </div>
+      {/* Jobs Category Section */}
+      <JobsByCategorySectionHome />
     </div>
   );
 }
