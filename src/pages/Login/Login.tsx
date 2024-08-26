@@ -2,9 +2,24 @@ import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Checkbox } from "@/components/ui/checkbox";
+import { useMsal } from "@azure/msal-react";
+import { loginRequest } from "../../auth/authConfig.js";
 
 function Login() {
+  const { instance, accounts } = useMsal();
   const [isNotMobile, setIsNotMobile] = useState(window.innerWidth >= 900);
+
+  const handleLogin = () => {
+    instance.loginPopup(loginRequest).catch((e) => {
+      console.error(e);
+    });
+  };
+
+  const handleLogout = () => {
+    instance.logoutPopup().catch((e) => {
+      console.error(e);
+    });
+  };
 
   useEffect(() => {
     setIsNotMobile(window.innerWidth >= 900);
@@ -132,6 +147,19 @@ function Login() {
         <button className="mt-8 bg-[#434bdf] md:text-lg xl:text-base 2xl:text-lg text-white font-bold h-11 rounded-[0.125rem] hover:opacity-95 focus:opacity-95 active:scale-[.99] transition-transform">
           <span>Login</span>
         </button>
+        <div>
+          {accounts.length > 0 ? (
+            <>
+              <p>Welcome, {accounts[0].name}</p>
+              <button onClick={handleLogout}>Logout</button>
+            </>
+          ) : (
+            <>
+            <svg className="mt-8 w-6 h-6" onClick={handleLogin} xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><path fill="#f1511b" d="M121.666 121.666H0V0h121.666z"></path><path fill="#80cc28" d="M256 121.666H134.335V0H256z"></path><path fill="#00adef" d="M121.663 256.002H0V134.336h121.663z"></path><path fill="#fbbc09" d="M256 256.002H134.335V134.336H256z"></path></svg>
+            <p>Login with Microsoft</p>
+            </>
+          )}
+        </div>
         <div className="mt-5 flex justify-evenly text-[0.8125rem] md:text-base xl:text-[0.8125rem] 2xl:text-base">
           <p>
             Don't have an account? <span> </span>
