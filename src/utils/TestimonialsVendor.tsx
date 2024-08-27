@@ -54,8 +54,8 @@ const testimonials = [
 
 function TestimonialsVendor({}: Props) {
   return (
-    <div className="relative py-14 px-4 font-montserrat">
-      <section>
+    <section className="relative py-14 px-4 font-montserrat">
+      <div>
         <div>
           <div className="mb-3">
             <h1 className="text-center text-xl font-semibold">
@@ -77,37 +77,38 @@ function TestimonialsVendor({}: Props) {
           </div>
         </div>
         <div className="">
-            <Carousel>
-                <CarouselContent>
-
-          {testimonials.map((item) => (
-              <CarouselItem key={item.id}>
-                <div className="mb-7">
-                  <p className="text-center italic">{item.testimonial}</p>
-                </div>
-                <div className="mb-7">
-                  <div>
-                    <p className="text-center font-semibold">{item.name}</p>
+          <Carousel>
+            <CarouselContent>
+              {testimonials.map((item) => (
+                <CarouselItem key={item.id}>
+                  <div className="mb-7 px-3.5">
+                    <p className="text-center italic">{item.testimonial}</p>
                   </div>
-                  <div>
-                    <p className="text-center font-light">{item.title}</p>
+                  <div className="mb-7">
+                    <div>
+                      <p className="text-center font-semibold">{item.name}</p>
+                    </div>
+                    <div>
+                      <p className="text-center font-light">{item.title}</p>
+                    </div>
                   </div>
-                </div>
-                <div className="flex justify-center">
-                  <div>
-                    <Avatar>
-                      <AvatarImage src="https://github.com/shadcn.png" />
-                      <AvatarFallback>CN</AvatarFallback>
-                    </Avatar>
+                  <div className="flex justify-center">
+                    <div>
+                      <Avatar>
+                        <AvatarImage src="https://github.com/shadcn.png" />
+                        <AvatarFallback>CN</AvatarFallback>
+                      </Avatar>
+                    </div>
                   </div>
-                </div>
-              </CarouselItem>
-          ))}
-          </CarouselContent>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
           </Carousel>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 }
 

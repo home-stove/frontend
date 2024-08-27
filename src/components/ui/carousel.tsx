@@ -206,7 +206,7 @@ const CarouselPrevious = React.forwardRef<
       className={cn(
         "absolute  h-8 w-8 rounded-full",
         orientation === "horizontal"
-          ? "-left-12 top-1/2 -translate-y-1/2"
+          ? `group -left-3 top-1/2 -translate-y-1/2 hover:bg-[#5bbb7b] ${!canScrollPrev && "bg-white"}`
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
@@ -214,7 +214,7 @@ const CarouselPrevious = React.forwardRef<
       onClick={scrollPrev}
       {...props}
     >
-      <ArrowLeft className="h-4 w-4" />
+      <ArrowLeft className={`${!canScrollPrev && "text-black"} h-4 w-4 hover:text-white focus:text-white active:text-white group-hover:text-white`} />
       <span className="sr-only">Previous slide</span>
     </Button>
   )
@@ -235,7 +235,7 @@ const CarouselNext = React.forwardRef<
       className={cn(
         "absolute h-8 w-8 rounded-full",
         orientation === "horizontal"
-          ? "-right-12 top-1/2 -translate-y-1/2"
+          ? `group -right-3 top-1/2 -translate-y-1/2 hover:bg-[#5bbb7b] ${!canScrollNext && "bg-white"}`
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
@@ -243,7 +243,7 @@ const CarouselNext = React.forwardRef<
       onClick={scrollNext}
       {...props}
     >
-      <ArrowRight className="h-4 w-4" />
+      <ArrowRight className={`${!canScrollNext && "text-black"} h-4 w-4 hover:text-white focus:text-white active:text-white group-hover:text-white`} />
       <span className="sr-only">Next slide</span>
     </Button>
   )

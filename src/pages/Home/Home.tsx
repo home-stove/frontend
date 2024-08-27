@@ -1,3 +1,5 @@
+import CallToAction from "@/utils/CallToAction";
+import Footer from "@/utils/Footer";
 import Header from "@/utils/Header";
 import HeroSectionHome from "@/utils/HeroSectionHome";
 import HowItWorksVendor from "@/utils/HowItWorksVendor";
@@ -18,6 +20,10 @@ function Home() {
       <HowItWorksVendor />
       {/* Testimonials */}
       <TestimonialsVendor />
+      {/* Call to Action */}
+      <CallToAction />
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }

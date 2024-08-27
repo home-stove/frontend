@@ -5,9 +5,11 @@ type Props = {};
 // Hero Section Home
 function HeroSectionHome({}: Props) {
   return (
-    <div
+    <section
       className="relative bg-center bg-cover w-full h-[29rem]"
-      style={{ backgroundImage: `url(${"https://storagehomestovedev.blob.core.windows.net/web/landing-hero.jpg?sp=r&st=2024-08-20T12:36:02Z&se=2025-08-20T20:36:02Z&spr=https&sv=2022-11-02&sr=b&sig=XDD8Y%2BnmVM6969J%2BrxDmijtgdQ5q3KBeXGA0lfJYb3k%3D"})` }}
+      style={{
+        backgroundImage: `url(${"https://storagehomestovedev.blob.core.windows.net/web/landing-hero.jpg?sp=r&st=2024-08-20T12:36:02Z&se=2025-08-20T20:36:02Z&spr=https&sv=2022-11-02&sr=b&sig=XDD8Y%2BnmVM6969J%2BrxDmijtgdQ5q3KBeXGA0lfJYb3k%3D"})`,
+      }}
     >
       <div
         className="absolute w-full h-full top-0 left-0"
@@ -32,7 +34,7 @@ function HeroSectionHome({}: Props) {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

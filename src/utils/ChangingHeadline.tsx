@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-type Props = {}
+type Props = {};
 
 const phrases: string[] = [
   "for Every Sweet Occasion",
@@ -28,28 +28,28 @@ function ChangingHeadline({}: Props) {
   }, []);
   return (
     <div className="mb-5">
-    <h1 className="font-semibold text-xl opacity-[.99]">
-      Find Your Perfect Baker
-      <AnimatePresence mode="wait">
-        <motion.span
-          key={currentPhraseIndex}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{
-            type: "tween",
-            duration: 0.7,
-            ease: [0.64, 0, 0.78, 0],
-          }}
-          className="font-playfairDisplay"
-        >
-          {" "}
-          {phrases[currentPhraseIndex]}{" "}
-        </motion.span>
-      </AnimatePresence>
-    </h1>
-  </div>
-  )
+      <h1 className="font-semibold text-xl opacity-[.99]">
+        Find Your Perfect Baker
+        <AnimatePresence mode="wait">
+          <motion.span
+            key={currentPhraseIndex}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{
+              type: "tween",
+              duration: 0.7,
+              ease: [0.64, 0, 0.78, 0],
+            }}
+            className="font-playfairDisplay"
+          >
+            {" "}
+            {phrases[currentPhraseIndex]}{" "}
+          </motion.span>
+        </AnimatePresence>
+      </h1>
+    </div>
+  );
 }
 
-export default ChangingHeadline
+export default ChangingHeadline;

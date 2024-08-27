@@ -61,7 +61,7 @@ const jobsByCategorys = [
 
 function JobsByCategorySectionHome({}: Props) {
   return (
-    <div className="relative font-montserrat">
+    <section className="relative font-montserrat">
       <div className="flex flex-col items-center justify-center py-16">
         <div className="mb-12">
           <h1 className="text-xl font-semibold">Browse Jobs by Categories</h1>
@@ -70,10 +70,18 @@ function JobsByCategorySectionHome({}: Props) {
           {jobsByCategorys.map((category) => (
             <div
               className="relative bg-cover bg-center h-52 w-72 mb-12 rounded"
-              style={{ backgroundImage: `url(${category.imageUrl})`, transitionProperty: "background-size", transitionDuration: "0.8", transitionTimingFunction: "ease-out" }}
+              style={{
+                backgroundImage: `url(${category.imageUrl})`,
+                transitionProperty: "background-size",
+                transitionDuration: "0.8",
+                transitionTimingFunction: "ease-out",
+              }}
               key={category.id}
             >
-              <div className="absolute left-1/2 bottom-0 w-64 h-16 -translate-x-1/2 mb-5 text-white backdrop-blur-[0.3rem] rounded px-3.5 py-2.5" style={{background: `rgba(0,0,0,0.2)`}}>
+              <div
+                className="absolute left-1/2 bottom-0 w-64 h-16 -translate-x-1/2 mb-5 text-white backdrop-blur-[0.3rem] rounded px-3.5 py-2.5"
+                style={{ background: `rgba(0,0,0,0.2)` }}
+              >
                 <h2 className="font-semibold">{category.heading}</h2>
                 <p className="text-sm">{category.numberOfListings} Listings</p>
               </div>
@@ -81,12 +89,12 @@ function JobsByCategorySectionHome({}: Props) {
           ))}
         </div>
         <div className="h-11 w-52 -mt-3">
-        <button className="w-full h-full text-white font-semibold bg-[#26ae61] rounded">
-          View All Listings
-        </button>
+          <button className="w-full h-full text-white font-semibold bg-[#26ae61] rounded">
+            View All Listings
+          </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
