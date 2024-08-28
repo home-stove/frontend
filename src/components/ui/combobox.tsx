@@ -19,7 +19,7 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 
-const frameworks = [
+const categories = [
   {
     value: "cake decorator",
     label: "Cake Decorator",
@@ -52,9 +52,10 @@ export function ComboboxDemo() {
           className="w-full justify-between"
         >
           {value
-            ? frameworks.find((framework) => framework.value === value)?.label
+            ? categories.find((category) => category.value === value)?.label
             : "Categories"}
           <svg
+            className={`${open && "rotate-180"} transition-transform`}
             xmlns="http://www.w3.org/2000/svg"
             width="1.5em"
             height="1.5em"
@@ -64,16 +65,16 @@ export function ComboboxDemo() {
           </svg>
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-full p-0 font-montserrat">
+      <PopoverContent className="w-full xxxxs:w-72 xxs:w-80 md:max-w-52 p-0 font-montserrat">
         <Command>
           <CommandInput placeholder="Search Categories..." />
           <CommandList>
             <CommandEmpty>No category found.</CommandEmpty>
             <CommandGroup>
-              {frameworks.map((framework) => (
+              {categories.map((category) => (
                 <CommandItem
-                  key={framework.value}
-                  value={framework.value}
+                  key={category.value}
+                  value={category.value}
                   onSelect={(currentValue) => {
                     setValue(currentValue === value ? "" : currentValue);
                     setOpen(false);
@@ -82,10 +83,10 @@ export function ComboboxDemo() {
                   <Check
                     className={cn(
                       "mr-2 h-4 w-4",
-                      value === framework.value ? "opacity-100" : "opacity-0"
+                      value === category.value ? "opacity-100" : "opacity-0"
                     )}
                   />
-                  {framework.label}
+                  {category.label}
                 </CommandItem>
               ))}
             </CommandGroup>

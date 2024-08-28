@@ -12,20 +12,6 @@ module.exports = {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "xxxxs": "360px",
-        "xxxs": "375px",
-        "xxs": "390px",
-        "xs": "410px",
-        "sm": "430px",
-        "md": "768px",
-        "lg": "900px",
-        "xl": "1280px",
-        "2xl": "1366px",
-        "3xl": "1440px",
-        "4xl": "1536x",
-        "5xl": "1920px",
-      },
     },
     extend: {
       screens: {

@@ -5,8 +5,8 @@ type Props = {};
 // Search Form Home
 function SearchFormHome({}: Props) {
   return (
-    <div className="h-44 bg-white mb-4 p-3 opacity-[.99] rounded">
-      <div className="flex justify-start items-center pt-5 border-b border-b-[#ededed] pb-3 mb-2">
+    <div className="h-44 md:h-[4.5rem] bg-white mb-4 lg:mb-8 p-3 md:pl-7 opacity-[.99] rounded md:flex md:items-center md:justify-between lg:min-w-[48rem]">
+      <div className="md:w-1/2 flex justify-start items-center pt-5 xxs:pt-2 md:pt-0 border-b md:border-none border-b-[#ededed] pb-3 md:pb-0 mb-2">
         <svg
           className="mr-1"
           xmlns="http://www.w3.org/2000/svg"
@@ -26,15 +26,15 @@ function SearchFormHome({}: Props) {
           </g>
         </svg>
         <input
-          className="ml-1 bg-white h-full outline-none text-black placeholder:text-black placeholder:text-sm"
+          className="ml-1 bg-white h-full md:w-4/5 outline-none text-black placeholder:text-black placeholder:text-sm"
           type="text"
           placeholder="What are you looking for?"
         />
       </div>
-      <div className="relative flex items-center h-9 mb-2">
+      <div className="md:w-1/3 md:border-l md:border-l-[#ededed] relative flex items-center h-9 mb-2 md:mb-0">
         <ComboboxDemo />
       </div>
-      <div className="relative">
+      <div className="md:w-1/6 relative">
         <button className="w-full text-white text-sm font-semibold bg-[#5bbb7b] h-[3.25rem] rounded">
           Search
         </button>

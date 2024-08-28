@@ -27,8 +27,8 @@ function ChangingHeadline({}: Props) {
     return () => clearInterval(interval);
   }, []);
   return (
-    <div className="mb-5">
-      <h1 className="font-semibold text-xl opacity-[.99]">
+    <div className="mb-5 lg:mb-8">
+      <h1 className="font-semibold text-xl md:text-2xl lg:text-3xl 3xl:text-4xl opacity-[.99]">
         Find Your Perfect Baker
         <AnimatePresence mode="wait">
           <motion.span
