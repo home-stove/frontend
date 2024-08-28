@@ -9,10 +9,6 @@ module.exports = {
   ],
   prefix: "",
   theme: {
-    container: {
-      center: true,
-      padding: "2rem",
-    },
     extend: {
       screens: {
         "xxxxs": "360px",
@@ -25,9 +21,13 @@ module.exports = {
         "xl": "1280px",
         "2xl": "1366px",
         "3xl": "1440px",
-        "4xl": "1536x",
+        "4xl": "1536px",
         "5xl": "1920px",
       },
+    container: {
+      center: true,
+      padding: "2rem",
+    },
       colors: {
         cream: "#fefbea",
         border: "hsl(var(--border))",
