@@ -64,13 +64,13 @@ function JobsByCategorySectionHome({}: Props) {
     <section className="relative font-montserrat">
       <div className="flex xl:block flex-col items-center justify-center py-16">
         <div className="mb-12">
-          <h1 className="text-[#0c0c0c] text-xl xxxxs:text-2xl lg:text-3xl font-semibold xl:text-center">Browse Jobs by Categories</h1>
+          <h1 className="text-[#0c0c0c] text-xl xxxxs:text-[1.45rem] lg:text-3xl 5xl:text-4xl font-semibold xl:text-center">Browse Jobs by Categories</h1>
         </div>
         <div style={{}} className="md:grid md:grid-cols-4 md:grid-rows-2 md:gap-x-4 lg:gap-x-[1.33rem] xl:gap-x-6 2xl:gap-x-0 3xl:gap-x-4 4xl:gap-x-0 md:px-4 lg:px-0 xl:px-28 4xl:px-36 5xl:px-80 xl:place-items-center">
           {jobsByCategorys.map((category) => (
             <div
               key={category.id}
-              className={`relative overflow-hidden zoom-background bg-cover bg-center h-52 xs:h-56 md:min-h-60 xl:min-h-52 w-72 xxxxs:w-80 xs:w-[23rem] md:max-w-44 xl:max-w-64 3xl:min-w-72 mb-12 xl:mb-6 rounded-lg`}
+              className={`relative overflow-hidden zoom-background cursor-pointer bg-cover bg-center h-52 xs:h-56 md:min-h-60 xl:min-h-52 w-72 xxxxs:w-80 xs:w-[23rem] md:max-w-44 xl:max-w-64 3xl:min-w-72 mb-12 xl:mb-6 rounded-lg`}
               style={{
                 '--bg-image': `url(${category.imageUrl})`,
               } as React.CSSProperties}

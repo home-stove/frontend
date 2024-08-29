@@ -45,10 +45,10 @@ const steps: {
 
 function StepsCards({}: Props) {
   return (
-    <>
+    <div className="md:grid md:grid-cols-3 md:grid-rows-2 md:gap-x-6 xl:gap-x-8">
       {steps.map((step) => (
         <div
-          className="rounded-lg my-5 p-3 bg-white h-44 w-72 flex flex-col justify-around"
+          className={`rounded-lg my-3.5 p-3 lg:p-4 xl:p-6 bg-white h-44 md:h-60 lg:h-44 xl:h-56 w-72 xxxxs:w-80 xxxs:w-[21rem] xs:w-[23rem] md:w-56 lg:w-[17rem] xl:w-72 3xl:w-80 flex flex-col justify-around`}
           style={{
             boxShadow:
               "0px 6px 15px 0px rgba(64.00000000000001, 79.00000000000006, 104.00000000000004, 0.09)",
@@ -66,7 +66,7 @@ function StepsCards({}: Props) {
           </div>
         </div>
       ))}
-    </>
+    </div>
   );
 }
 
