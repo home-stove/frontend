@@ -3,14 +3,14 @@ type Props = {};
 function CallToAction({}: Props) {
   return (
     <section className="relative font-montserrat">
-      <div className="from-[#feebe5] via-[#feebdd] to-[#fde6d1] bg-gradient-to-r py-12 px-4">
+      <div style={{background: "linear-gradient(90deg, rgba(254,235,229,0.95) 0%, rgba(254,235,221,0.98) 40%, rgba(251,226,195,1) 100%)"}} className="py-9 px-4 xl:px-28 4xl:px-40 5xl:px-60 5xl:mx-24 5xl:rounded-t-3xl">
         <div className="mb-3">
-          <h1 className="text-xl font-bold">
+          <h1 className="text-xl xxxxs:text-[1.45rem] leading-8 font-semibold md:font-bold text-[#0c0c0c]">
             Join the Bakers' Revolution Today
           </h1>
         </div>
         <div className="mb-6">
-          <p className="text-sm">
+          <p className="text-sm text-[#0c0c0c]">
             Turn your passion into profit. Sign up now and connect with
             customers who appreciate your craft. Your next opportunity is just a
             click away.
@@ -22,6 +22,7 @@ function CallToAction({}: Props) {
               Get Started
             </span>
             <svg
+              className="translate-y-0.5"
               xmlns="http://www.w3.org/2000/svg"
               width="1.5em"
               height="2em"
