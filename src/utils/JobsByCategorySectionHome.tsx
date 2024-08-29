@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 type Props = {};
 
 const jobsByCategorys = [
@@ -62,7 +60,6 @@ const jobsByCategorys = [
 ];
 
 function JobsByCategorySectionHome({}: Props) {
-  const [hoveredImage, setHoveredImage] = useState(false);
   return (
     <section className="relative font-montserrat">
       <div className="flex xl:block flex-col items-center justify-center py-16">
@@ -72,16 +69,11 @@ function JobsByCategorySectionHome({}: Props) {
         <div style={{}} className="md:grid md:grid-cols-4 md:grid-rows-2 md:gap-x-4 lg:gap-x-[1.33rem] xl:gap-x-6 2xl:gap-x-0 3xl:gap-x-4 4xl:gap-x-0 md:px-4 lg:px-0 xl:px-28 4xl:px-36 5xl:px-80 xl:place-items-center">
           {jobsByCategorys.map((category) => (
             <div
-              className={`relative ${hoveredImage ? "bg-[length:125%]" : "bg-cover" } transition-[background-size] duration-1000 bg-center h-52 xs:h-56 md:min-h-60 xl:min-h-52 w-72 xxxxs:w-80 xs:w-[23rem] md:max-w-44 xl:max-w-64 3xl:min-w-72 mb-12 xl:mb-6 rounded-lg`}
-              onMouseEnter={() => setHoveredImage(true)}
-              onMouseLeave={() => setHoveredImage(false)} 
-              style={{
-                backgroundImage: `url(${category.imageUrl})`,
-                transitionProperty: "background-size",
-                transitionDuration: "0.8",
-                transitionTimingFunction: "ease-out",
-              }}
               key={category.id}
+              className={`relative overflow-hidden zoom-background bg-cover bg-center h-52 xs:h-56 md:min-h-60 xl:min-h-52 w-72 xxxxs:w-80 xs:w-[23rem] md:max-w-44 xl:max-w-64 3xl:min-w-72 mb-12 xl:mb-6 rounded-lg`}
+              style={{
+                '--bg-image': `url(${category.imageUrl})`,
+              } as React.CSSProperties}
             >
               <div
                 className="absolute left-1/2 bottom-0 w-64 xxxxs:w-72 xs:w-80 md:max-w-40 xl:max-w-60 3xl:min-w-64 h-16 md:h-20 xl:h-16 -translate-x-1/2 mb-5 text-white backdrop-blur-[0.3rem] rounded px-3.5 py-2.5 md:py-1.5 xl:py-2.5"

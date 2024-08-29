@@ -89,3 +89,17 @@ input:-webkit-autofill:focus {
 * {
   box-sizing: border-box;
 }
+
+/* Custom Zoom Effect for the Category Cards */
+.zoom-background::before {
+  content: '';
+  @apply absolute inset-0 transition-transform duration-500 ease-out;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Ensure it stays behind any content inside the div */
+}
+
+.zoom-background:hover::before {
+  transform: scale(1.25); /* Zoom the background by 25% */
+}
