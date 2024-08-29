@@ -54,21 +54,21 @@ const testimonials = [
 
 function TestimonialsVendor({}: Props) {
   return (
-    <section className="relative py-14 px-4 font-montserrat">
+    <section className="relative pt-14 md:pt-16 px-4 md:px-24 xl:px-44 3xl:px-60 5xl:px-[30rem] pb-6 md:pb-10 font-montserrat text-[#0c0c0c] 5xl:h-[70vh] 5xl:flex 5xl:justify-center 5xl:items-center">
       <div>
         <div>
-          <div className="mb-3">
-            <h1 className="text-center text-xl font-semibold">
+          <div className="mb-3 xl:mb-4">
+            <h1 className="text-center text-xl xxxxs:text-[1.45rem] lg:text-3xl 5xl:text-4xl font-semibold">
               Hear from Our Bakers
             </h1>
           </div>
-          <div className="px-2 mb-7">
+          <div className="px-2 mb-7 xl:mb-8">
             <p className="text-center text-sm">
               Discover how we’ve helped bakers like you find success and grow
               their business.
             </p>
           </div>
-          <div className="mb-3">
+          <div className="mb-3 xl:mb-4 4xl:mb-7">
             <img
               className="mx-auto"
               src="https://storagehomestovedev.blob.core.windows.net/web/VendorHome/quote-icon.png?sp=r&st=2024-08-26T18:30:04Z&se=2025-08-27T02:30:04Z&spr=https&sv=2022-11-02&sr=b&sig=AQfBuOhmbWCJwsJJyEfowZ0Svyq%2BJf3j8VFthKimVtg%3D"
@@ -81,8 +81,8 @@ function TestimonialsVendor({}: Props) {
             <CarouselContent>
               {testimonials.map((item) => (
                 <CarouselItem key={item.id}>
-                  <div className="mb-7 px-3.5">
-                    <p className="text-center italic">{item.testimonial}</p>
+                  <div className="mb-7 4xl:mb-14 px-3.5">
+                    <p className="text-center italic font-semibold xl:text-2xl 2xl:leading-10 select-none">{item.testimonial}</p>
                   </div>
                   <div className="mb-7">
                     <div>
