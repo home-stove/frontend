@@ -6,7 +6,7 @@ type Props = {};
 function SearchFormHome({}: Props) {
   return (
     <div className="h-44 md:h-[4.5rem] bg-white mb-4 lg:mb-8 p-3 md:pl-7 opacity-[.99] rounded md:flex md:items-center md:justify-between lg:min-w-[48rem]">
-      <div className="md:w-1/2 flex justify-start items-center pt-5 xxs:pt-2 md:pt-0 border-b md:border-none border-b-[#ededed] pb-3 md:pb-0 mb-2">
+      <div className="md:w-1/2 flex justify-start items-center pt-5 xxs:pt-2 md:pt-0 border-b md:border-none border-b-[#ededed] pb-3 md:pb-0 mb-2 md:mb-0">
         <svg
           className="mr-1"
           xmlns="http://www.w3.org/2000/svg"

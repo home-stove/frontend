@@ -41,14 +41,14 @@ function Login() {
           <div className="flex items-center justify-between pt-3 md:pt-6 lg:pt-3 5xl:pt-4">
             <Link to={"/"}>
               <img
-                className="h-16 opacity-90"
+                className="h-16 opacity-[.99]"
                 src="/home-stove-favicon.png"
                 alt="home stove logo"
               />
             </Link>
             <div className="flex justify-between items-center">
               <svg
-                className="opacity-90 hover:-translate-y-1 transition-transform cursor-pointer"
+                className="opacity-[.99] hover:-translate-y-1 transition-transform cursor-pointer"
                 xmlns="http://www.w3.org/2000/svg"
                 width="1.5em"
                 height="1.75em"
@@ -60,7 +60,7 @@ function Login() {
                 ></path>
               </svg>
               <svg
-                className="mx-4 opacity-90 hover:-translate-y-1 transition-transform cursor-pointer"
+                className="mx-4 opacity-[.99] hover:-translate-y-1 transition-transform cursor-pointer"
                 xmlns="http://www.w3.org/2000/svg"
                 width="1.5em"
                 height="1.75em"
@@ -72,7 +72,7 @@ function Login() {
                 ></path>
               </svg>
               <svg
-                className="opacity-90 hover:-translate-y-1 transition-transform cursor-pointer"
+                className="opacity-[.99] hover:-translate-y-1 transition-transform cursor-pointer"
                 xmlns="http://www.w3.org/2000/svg"
                 width="1.5em"
                 height="1.75em"
@@ -91,13 +91,13 @@ function Login() {
                 animation:
                   "typing 3s steps(30), cursor 0.4s step-end infinite alternate",
               }}
-              className="text-white opacity-80 md:opacity-70 font-bold w-full whitespace-nowrap overflow-hidden border-r border-white md:text-lg"
+              className="text-white opacity-80 md:opacity-85 font-bold w-full whitespace-nowrap overflow-hidden border-r border-white md:text-lg"
             >
               WELCOME BACK
             </h1>
             <motion.p
               initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 0.95 }}
+              whileInView={{ y: 0, opacity: 0.99 }}
               transition={{
                 type: "tween",
                 duration: 0.7,
