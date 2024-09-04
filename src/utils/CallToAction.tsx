@@ -11,7 +11,7 @@ function CallToAction({}: Props) {
           background:
             "linear-gradient(90deg, rgba(254,235,229,0.95) 0%, rgba(254,235,221,0.98) 40%, rgba(251,226,195,1) 100%)",
         }}
-        className="relative md:h-96 lg:mx-2 py-9 md:py-11 px-4 xl:px-28 4xl:px-40 5xl:px-60 5xl:mx-24 5xl:rounded-t-3xl md:flex md:justify-center md:items-center"
+        className="relative md:h-96 py-9 md:py-11 lg:py-14 xl:py-20 5xl:py-24 px-4 xl:px-28 4xl:px-40 5xl:px-60 5xl:mx-24 5xl:rounded-t-3xl md:flex md:justify-center md:items-center"
       >
         <div className="md:pr-96">
           <div className="mb-3">

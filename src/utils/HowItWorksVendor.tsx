@@ -12,7 +12,7 @@ function HowItWorksVendor({}: Props) {
           alt=""
         />
       </div>
-      <section className="bg-[#f2fcfb] px-4 py-9 md:py-11 xl:px-28 xl:h-full xl:flex xl:flex-col xl:justify-center xl:items-end 5xl:items-end 5xl:rounded-3xl" style={{background: 'linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(242,252,251,1) 35%)'}}>
+      <section className="bg-[#f2fcfb] px-4 py-9 md:py-11 lg:py-14 xl:py-20 5xl:py-24 xl:px-28 xl:h-full xl:flex xl:flex-col xl:justify-center xl:items-end 5xl:items-end 5xl:rounded-3xl" style={{background: 'linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(242,252,251,1) 35%)'}}>
         <div className="flex flex-col items-center font-montserrat z-10 relative xl:self-center">
           <div className="py-3 ">
             <h1 className="text-[#0c0c0c] text-[1.3rem] xxxxs:text-[1.45rem] lg:text-3xl 5xl:text-4xl font-semibold">Ready to Bake Up Success?</h1>
