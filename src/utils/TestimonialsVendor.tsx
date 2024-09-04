@@ -54,7 +54,7 @@ const testimonials = [
 
 function TestimonialsVendor({}: Props) {
   return (
-    <section className="relative py-9 md:pt-16 px-4 md:px-24 xl:px-44 3xl:px-60 5xl:px-[30rem] pb-6 md:pb-10 font-montserrat text-[#0c0c0c] 5xl:h-[70vh] 5xl:flex 5xl:justify-center 5xl:items-center">
+    <section className="relative py-9 md:py-11 px-4 md:px-24 xl:px-44 3xl:px-60 5xl:px-[30rem] font-montserrat text-[#0c0c0c] 5xl:h-[70vh] 5xl:flex 5xl:justify-center 5xl:items-center">
       <div>
         <div>
           <div className="mb-3 xl:mb-4">

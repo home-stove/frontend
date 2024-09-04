@@ -1,15 +1,17 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 type Props = {};
 
 export default function Header({}: Props) {
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 900);
   return (
     <header className="relative h-20 bg-white lg:bg-transparent lg:absolute lg:z-10 lg:w-full lg:max-w-none font-montserrat md:max-w-[45rem] md:mx-auto lg:border-b lg:border-b-[#353535]">
       <div className="flex items-center justify-between px-4 pt-5">
         <div>
           <Link to={"/"}>
             <img
-              src={window.innerWidth > 900 ? "https://demoapus1.com/freeio/wp-content/uploads/2022/09/logo-white2.png" : "https://demoapus1.com/freeio/wp-content/themes/freeio/images/logo.svg"}
+              src={isDesktop ? "https://demoapus1.com/freeio/wp-content/uploads/2022/09/logo-white2.png" : "https://demoapus1.com/freeio/wp-content/themes/freeio/images/logo.svg"}
               alt="Home Stove Logo"
             />
           </Link>
@@ -28,8 +30,8 @@ export default function Header({}: Props) {
               viewBox="0 0 24 24"
             >
               <path
-                fill={window.innerWidth > 900 ? "white" : "black"}
-                stroke={window.innerWidth > 900 ? "white" : "black"}
+                fill={isDesktop ? "white" : "black"}
+                stroke={isDesktop ? "white" : "black"}
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth={1.5}
