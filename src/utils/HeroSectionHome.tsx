@@ -6,7 +6,7 @@ type Props = {};
 function HeroSectionHome({}: Props) {
   return (
     <section
-      className="relative bg-center lg:bg-top xl:bg-center bg-cover w-full h-[29rem] md:h-[23rem] lg:h-[90vh] xl:h-screen"
+      className="relative bg-center lg:bg-top xl:bg-center bg-cover w-full h-[29rem] md:h-[23rem] lg:h-[90vh] 2xl:h-[95vh] 4xl:h-[97vh]"
       style={{
         backgroundImage: `url(${"https://storagehomestovedev.blob.core.windows.net/web/landing-hero.jpg?sp=r&st=2024-08-20T12:36:02Z&se=2025-08-20T20:36:02Z&spr=https&sv=2022-11-02&sr=b&sig=XDD8Y%2BnmVM6969J%2BrxDmijtgdQ5q3KBeXGA0lfJYb3k%3D"})`,
       }}

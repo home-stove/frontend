@@ -62,9 +62,9 @@ const jobsByCategorys = [
 function JobsByCategorySectionHome({}: Props) {
   return (
     <section className="relative font-montserrat">
-      <div className="flex xl:block flex-col items-center justify-center py-16">
+      <div className="flex xl:block flex-col items-center justify-center py-9">
         <div className="mb-12">
-          <h1 className="text-[#0c0c0c] text-xl xxxxs:text-[1.45rem] lg:text-3xl 5xl:text-4xl font-semibold xl:text-center">Browse Jobs by Categories</h1>
+          <h1 className="text-[#0c0c0c] text-[1.3rem] xxxxs:text-[1.45rem] lg:text-3xl 5xl:text-4xl font-semibold xl:text-center">Browse Jobs by Categories</h1>
         </div>
         <div style={{}} className="md:grid md:grid-cols-4 md:grid-rows-2 md:gap-x-4 lg:gap-x-[1.33rem] xl:gap-x-6 2xl:gap-x-0 3xl:gap-x-4 4xl:gap-x-0 md:px-4 lg:px-0 xl:px-28 4xl:px-36 5xl:px-80 xl:place-items-center">
           {jobsByCategorys.map((category) => (

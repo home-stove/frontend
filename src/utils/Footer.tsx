@@ -6,7 +6,7 @@ function Footer({}: Props) {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 900);
   return (
     <footer className="relative font-montserrat bg-[#222222] text-white">
-      <div className="px-4 lg:px-8 xl:px-28 4xl:px-40 5xl:px-60 py-8 xl:py-9 5xl:mx-24">
+      <div className="px-4 lg:px-8 xl:px-28 4xl:px-40 5xl:px-60 pt-9 pb-5 xl:py-9 5xl:mx-24">
         <div className="border-b xxs:border-b-2 border-b-[#3f3f3f] md:flex md:justify-between md:items-start md:h-[4.5rem]">
           <div className="md:w-2/3 flex flex-wrap xxxxs:flex-nowrap text-sm md:text-base font-semibold mb-5 gap-y-2 xxxxs:gap-x-4 md:gap-x-6">
             <p>Terms of Service</p>

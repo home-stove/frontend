@@ -5,7 +5,7 @@ function CallToAction({}: Props) {
     <section className="relative font-montserrat">
       <div style={{background: "linear-gradient(90deg, rgba(254,235,229,0.95) 0%, rgba(254,235,221,0.98) 40%, rgba(251,226,195,1) 100%)"}} className="py-9 px-4 xl:px-28 4xl:px-40 5xl:px-60 5xl:mx-24 5xl:rounded-t-3xl">
         <div className="mb-3">
-          <h1 className="text-xl xxxxs:text-[1.45rem] leading-8 font-semibold md:font-bold text-[#0c0c0c]">
+          <h1 className="text-[1.3rem] xxxxs:text-[1.45rem] leading-8 font-semibold md:font-bold text-[#0c0c0c]">
             Join the Bakers' Revolution Today
           </h1>
         </div>
