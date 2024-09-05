@@ -1,4 +1,4 @@
-import { ComboboxDemo } from "@/components/ui/combobox";
+import { SearchFormCombobox } from "@/components/ui/combobox";
 
 type Props = {};
 
@@ -32,7 +32,7 @@ function SearchFormHome({}: Props) {
         />
       </div>
       <div className="md:w-1/3 md:border-l md:border-l-[#ededed] relative flex items-center h-9 mb-2 md:mb-0">
-        <ComboboxDemo />
+        <SearchFormCombobox />
       </div>
       <div className="md:w-1/6 relative">
         <button className="w-full text-white text-sm font-semibold bg-[#5bbb7b] h-[3.25rem] rounded">

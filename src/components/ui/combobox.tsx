@@ -38,7 +38,30 @@ const categories = [
   },
 ];
 
-export function ComboboxDemo() {
+const sortTypes = [
+  {
+    value: "default",
+    label: "Sort By (Default)",
+  },
+  {
+    value: "newest",
+    label: "Newest",
+  },
+  {
+    value: "oldest",
+    label: "Oldest",
+  },
+  {
+    value: "rating asc",
+    label: "Rating (asc)",
+  },
+  {
+    value: "rating desc",
+    label: "Rating (dec)",
+  }
+];
+
+export function SearchFormCombobox() {
   const [open, setOpen] = React.useState(false);
   const [value, setValue] = React.useState("");
 
@@ -87,6 +110,64 @@ export function ComboboxDemo() {
                     )}
                   />
                   {category.label}
+                </CommandItem>
+              ))}
+            </CommandGroup>
+          </CommandList>
+        </Command>
+      </PopoverContent>
+    </Popover>
+  );
+}
+
+export function SortByCombobox() {
+  const [open, setOpen] = React.useState(false);
+  const [value, setValue] = React.useState("");
+
+  return (
+    <Popover open={open} onOpenChange={setOpen}>
+      <PopoverTrigger asChild>
+        <Button
+          variant="category"
+          role="combobox"
+          aria-expanded={open}
+          className="w-full justify-between"
+        >
+          {value
+            ? sortTypes.find((sortType) => sortType.value === value)?.label
+            : "Sort By (Default)"}
+          <svg
+            className={`${open && "rotate-180"} transition-transform`}
+            xmlns="http://www.w3.org/2000/svg"
+            width="1.5em"
+            height="1.5em"
+            viewBox="0 0 24 24"
+          >
+            <path fill="black" d="m7 10l5 5l5-5z"></path>
+          </svg>
+        </Button>
+      </PopoverTrigger>
+      <PopoverContent className="w-48 xxxxs:w-72 xxs:w-80 md:max-w-52 p-0 font-montserrat">
+        <Command>
+          <CommandList>
+            <CommandEmpty>No sorting selected.</CommandEmpty>
+            <CommandGroup>
+              {sortTypes.map((sortType) => (
+                <CommandItem
+                  key={sortType.value}
+                  value={sortType.value}
+                  onSelect={(currentValue) => {
+                    setValue(currentValue === value ? "" : currentValue);
+                    setOpen(false);
+                  }}
+                >
+                  <Check
+                    className={cn(
+                      "mr-2 h-4 w-4",
+                      value === sortType.value ? "opacity-100" : "opacity-0"
+                    )}
+                  />
+                  {sortType.label}
                 </CommandItem>
               ))}
             </CommandGroup>

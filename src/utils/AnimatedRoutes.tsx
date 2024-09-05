@@ -3,6 +3,7 @@ import Login from "@/pages/Login/Login";
 import { AnimatePresence } from "framer-motion";
 import { Route, Routes, useLocation } from "react-router-dom";
 import TestLogin from "./TestLogin";
+import VendorsList from "@/pages/Home/CustomerDashboard/VendorsList/VendorsList";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -12,7 +13,7 @@ function AnimatedRoutes() {
         <Route index path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/testlogin" element={<TestLogin />} />
-        {/* Add more routes here */}
+        <Route path="/customer-dashboard/vendors" element={<VendorsList />} />
       </Routes>
     </AnimatePresence>
   );

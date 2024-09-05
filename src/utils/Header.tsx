@@ -6,7 +6,7 @@ type Props = {};
 export default function Header({}: Props) {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 900);
   return (
-    <header className="relative h-20 bg-white lg:bg-transparent lg:absolute lg:z-10 lg:w-full lg:max-w-none font-montserrat md:max-w-[45rem] md:mx-auto lg:border-b lg:border-b-[#353535]">
+    <header className="relative h-20 bg-white lg:bg-transparent lg:absolute lg:z-10 lg:w-full lg:max-w-none font-montserrat md:max-w-[45rem] md:mx-auto lg:border-b lg:border-b-[#353535] border-b-[#e9e9e9] border-b">
       <div className="flex items-center justify-between px-4 pt-5">
         <div>
           <Link to={"/"}>
