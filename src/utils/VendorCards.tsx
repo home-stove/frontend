@@ -1,4 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Link } from "react-router-dom";
 
 type Props = {};
 
@@ -87,15 +88,19 @@ const vendors = [
 
 function VendorCards({}: Props) {
   return (
-    <div className="text-[#0c0c0c]">
+    <div className="text-[#0c0c0c] my-9">
       {vendors.map((vendor) => (
-        <div className="text-sm my-5 p-3 border border-[#e9e9e9]" key={vendor.id}>
-          <div className="flex gap-x-3 items-center pb-5">
+        <div
+          className="group text-sm my-7 px-4 py-7 border border-[#e9e9e9]"
+          key={vendor.id}
+        >
+          <div className="flex gap-x-3 items-center pb-7">
             <Avatar className="w-20 h-20">
               <AvatarImage src="https://github.com/shadcn.png" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
-            <div>
+            {/* Vendor Details */}
+            <div className="flex flex-col gap-y-1">
               <h2 className="font-semibold text-base">{vendor.name}</h2>
               <h3 className="text-[#26ae61]">{vendor.profession}</h3>
               <div className="flex items-center">
@@ -111,22 +116,56 @@ function VendorCards({}: Props) {
                   ></path>
                 </svg>
                 <p className="font-semibold">&nbsp;{vendor.rating}</p>
-                <p className="text-[#a2a2a2]">&nbsp;({vendor.totalReviews} Reviews)</p>
+                <p className="text-[#797979]">
+                  &nbsp;({vendor.totalReviews} Reviews)
+                </p>
               </div>
             </div>
           </div>
-          <div className="flex flex-col gap-y-2">
+          {/* Icons */}
+          <div className="flex flex-col gap-y-2 pb-5">
             <div className="flex items-center gap-x-2">
-              <img className="h-5 w-5" src="https://storagehomestovedev.blob.core.windows.net/web/pin.png?sp=r&st=2024-09-05T22:48:39Z&se=2025-09-06T06:48:39Z&spr=https&sv=2022-11-02&sr=b&sig=F47ZhNp00LfTDVXN64VMcxB4E4dCgwDankK3AN8GOSM%3D" alt="location pin" />
-              <p className="text-[#a2a2a2]">{vendor.location}</p>
+              <img
+                className="h-5 w-5"
+                src="https://storagehomestovedev.blob.core.windows.net/web/pin.png?sp=r&st=2024-09-05T22:48:39Z&se=2025-09-06T06:48:39Z&spr=https&sv=2022-11-02&sr=b&sig=F47ZhNp00LfTDVXN64VMcxB4E4dCgwDankK3AN8GOSM%3D"
+                alt="location pin"
+              />
+              <p className="text-[#797979]">{vendor.location}</p>
             </div>
             <div className="flex items-center gap-x-2">
-              <img className="h-5 w-5" src="https://storagehomestovedev.blob.core.windows.net/web/route.png?sp=r&st=2024-09-05T23:00:53Z&se=2025-09-06T07:00:53Z&spr=https&sv=2022-11-02&sr=b&sig=oZ1Ns%2FzdpiEBlKCf3mBWBU4pD%2Fc%2F8rbbdJZXTehMhhA%3D" alt="route" />
-              <p className="text-[#a2a2a2]">{vendor.distance}</p>
+              <img
+                className="h-5 w-5"
+                src="https://storagehomestovedev.blob.core.windows.net/web/route.png?sp=r&st=2024-09-05T23:00:53Z&se=2025-09-06T07:00:53Z&spr=https&sv=2022-11-02&sr=b&sig=oZ1Ns%2FzdpiEBlKCf3mBWBU4pD%2Fc%2F8rbbdJZXTehMhhA%3D"
+                alt="route"
+              />
+              <p className="text-[#797979]">{vendor.distance}</p>
             </div>
           </div>
+          {/* Bio */}
+          <div className="pb-5">
+            <p className="text-[#797979] leading-7">
+              {vendor.bio.substring(0, 175)}. . .
+            </p>
+          </div>
+          {/* Skills Pills */}
+          <div className="flex gap-x-3 pb-5">
+            {vendor.specialties.map((specialty) => (
+              <div
+                key={vendor.id}
+                className="bg-[#ffede8] h-7 px-2 rounded-3xl flex items-center justify-center"
+              >
+                <span className="text-xs">{specialty}</span>
+              </div>
+            ))}
+          </div>
+          {/* View Profile */}
           <div>
-            <p className="text-[#a2a2a2]">{vendor.bio.substring(0, 200)}...</p>
+            <Link
+              to={`/customer-dashboard/vendors/${vendor.id}`}
+              className="group-hover:bg-opacity-100 group-hover:text-white transition-all w-36 h-11 bg-[#5bbb7b] bg-opacity-15 hover:bg-opacity-100 hover:text-white flex items-center justify-center text-[#26ae61] font-semibold rounded-lg"
+            >
+              View Profile
+            </Link>
           </div>
         </div>
       ))}
