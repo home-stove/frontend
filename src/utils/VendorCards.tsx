@@ -91,15 +91,40 @@ function VendorCards({}: Props) {
     <div className="text-[#0c0c0c] my-9">
       {vendors.map((vendor) => (
         <div
-          className="group text-sm my-7 px-4 py-7 border border-[#e9e9e9]"
+          className="relative text-sm my-7 px-4 py-7 border border-[#e9e9e9]"
           key={vendor.id}
+          style={{
+            boxShadow:
+              "0px 6px 15px 0px rgba(64.00000000000001, 79.00000000000006, 104.00000000000004, 0.09)",
+          }}
         >
-          <div className="flex gap-x-3 items-center pb-7">
-            <Avatar className="w-20 h-20">
+          {/* Favorite Heart */}
+          <div
+            className="group hover:bg-[#5bbb7b] absolute top-4 right-4 w-8 h-8 rounded-full flex items-center justify-center"
+            style={{
+              boxShadow:
+                "0px 6px 15px 0px rgba(64.00000000000001, 79.00000000000006, 104.00000000000004, 0.09)",
+            }}
+          >
+            <svg
+              className="hover:text-white text-[#0c0c0c] group-hover:text-white"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1.25em"
+              height="1.25em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="currentColor"
+                d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2m-3.566 15.604a27 27 0 0 0 2.42-1.701C18.335 14.533 20 11.943 20 9c0-2.36-1.537-4-3.5-4c-1.076 0-2.24.57-3.086 1.414L12 7.828l-1.414-1.414C9.74 5.57 8.576 5 7.5 5C5.56 5 4 6.657 4 9c0 2.944 1.666 5.533 4.645 7.903c.745.593 1.54 1.146 2.421 1.7c.299.189.595.37.934.572c.339-.202.635-.383.934-.571"
+              ></path>
+            </svg>
+          </div>
+          {/* Vendor Details */}
+          <div className="flex gap-x-3 xxxs:gap-x-7 items-center pb-7">
+            <Avatar className="w-20 h-20 xxxs:h-24 xxxs:w-24">
               <AvatarImage src="https://github.com/shadcn.png" />
               <AvatarFallback>CN</AvatarFallback>
             </Avatar>
-            {/* Vendor Details */}
             <div className="flex flex-col gap-y-1">
               <h2 className="font-semibold text-base">{vendor.name}</h2>
               <h3 className="text-[#26ae61]">{vendor.profession}</h3>
@@ -162,7 +187,7 @@ function VendorCards({}: Props) {
           <div>
             <Link
               to={`/customer-dashboard/vendors/${vendor.id}`}
-              className="group-hover:bg-opacity-100 group-hover:text-white transition-all w-36 h-11 bg-[#5bbb7b] bg-opacity-15 hover:bg-opacity-100 hover:text-white flex items-center justify-center text-[#26ae61] font-semibold rounded-lg"
+              className="transition-all w-36 h-11 bg-[#5bbb7b] bg-opacity-15 hover:bg-opacity-100 hover:text-white flex items-center justify-center text-[#26ae61] font-semibold rounded-lg"
             >
               View Profile
             </Link>

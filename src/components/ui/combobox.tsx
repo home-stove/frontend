@@ -9,7 +9,6 @@ import {
   Command,
   CommandEmpty,
   CommandGroup,
-  CommandInput,
   CommandItem,
   CommandList,
 } from "@/components/ui/command";
@@ -90,7 +89,6 @@ export function SearchFormCombobox() {
       </PopoverTrigger>
       <PopoverContent className="w-full xxxxs:w-72 xxs:w-80 md:max-w-52 p-0 font-montserrat">
         <Command>
-          <CommandInput placeholder="Search Categories..." />
           <CommandList>
             <CommandEmpty>No category found.</CommandEmpty>
             <CommandGroup>
@@ -147,7 +145,7 @@ export function SortByCombobox() {
           </svg>
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-48 xxxxs:w-72 xxs:w-80 md:max-w-52 p-0 font-montserrat">
+      <PopoverContent className="w-48 md:max-w-52 p-0 font-montserrat">
         <Command>
           <CommandList>
             <CommandEmpty>No sorting selected.</CommandEmpty>

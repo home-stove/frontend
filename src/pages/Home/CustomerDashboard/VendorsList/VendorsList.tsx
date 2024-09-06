@@ -2,31 +2,34 @@ import { SortByCombobox } from "@/components/ui/combobox";
 import Footer from "@/utils/Footer";
 import Header from "@/utils/Header";
 import VendorCards from "@/utils/VendorCards";
+import { useState } from "react";
 
 
 type Props = {};
 
 function VendorsList({}: Props) {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   return (
     <section className="relative font-montserrat text-[#0c0c0c]">
       <div>
         <Header />
       </div>
-      <main className="py-5">
+      <main className="py-5 lg:pt-24">
         {/* The route for this page */}
-        <div className="px-4 pb-5">
+        <div className="px-4 md:px-10 pb-5">
           <p className="text-sm text-[#0c0c0c]">
             Home <span className="text-[#a2a2a2]">/ Vendors</span>
           </p>
         </div>
         {/* The Hero Section */}
         <div
-          className="px-4 py-9"
+          className="px-4 md:px-10 md:pr-96 py-9 relative"
           style={{
             background:
               "linear-gradient(90deg, rgba(254,235,229,0.95) 0%, rgba(254,235,221,0.98) 40%, rgba(251,226,195,1) 100%)",
           }}
         >
+          {!isMobile && <img className="md:absolute md:bottom-0 md:right-10 md:w-80 md:h-full" src="https://storagehomestovedev.blob.core.windows.net/web/chef-illustration-vendors.svg?sp=r&st=2024-09-06T17:23:35Z&se=2025-09-07T01:23:35Z&spr=https&sv=2022-11-02&sr=b&sig=t9fsrzpX443exYuWSxBGVUvV%2FX3pLx2dBakpYwQDvjE%3D" alt="chef illustration" />}
           <div className="pb-3">
             <h1 className="text-[1.3rem] xxxxs:text-[1.45rem] lg:text-3xl 5xl:text-4xl font-semibold">
               Discover the Best Bakers in Your Area
@@ -48,7 +51,7 @@ function VendorsList({}: Props) {
           </div>
         </div>
         {/* The Bakers list section */}
-        <div className="px-4 py-7">
+        <div className="px-4 md:px-10 py-7">
           <div className="pb-4">
             <button className="border border-[#e9e9e9] bg-[#f2fcfb] rounded-lg flex items-center justify-center gap-x-1 w-28 h-11">
               <svg
@@ -84,9 +87,9 @@ function VendorsList({}: Props) {
           </div>
         </div>
       </main>
-      {/* <div>
+      <div>
             <Footer />
-        </div> */}
+        </div>
     </section>
   );
 }
