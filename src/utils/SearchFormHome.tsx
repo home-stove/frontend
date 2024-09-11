@@ -1,11 +1,17 @@
 import { SearchFormCombobox } from "@/components/ui/combobox";
+import { motion } from "framer-motion";
 
 type Props = {};
 
 // Search Form Home
 function SearchFormHome({}: Props) {
   return (
-    <div className="h-44 md:h-[4.5rem] bg-white mb-4 lg:mb-8 p-3 md:pl-7 opacity-[.99] rounded md:flex md:items-center md:justify-between lg:min-w-[48rem]">
+    <motion.div
+    initial={{y: 50, opacity: 0}}
+    whileInView={{y: 0, opacity: .99}}
+    transition={{delay: 0.5, ease: "easeOut", duration: 0.5}}
+    viewport={{once: true}}
+    className="h-44 md:h-[4.5rem] bg-white mb-4 lg:mb-8 p-3 md:pl-7 opacity-[.99] rounded md:flex md:items-center md:justify-between lg:min-w-[48rem]">
       <div className="md:w-1/2 flex justify-start items-center pt-5 xxs:pt-2 md:pt-0 border-b md:border-none border-b-[#ededed] pb-3 md:pb-0 mb-2 md:mb-0">
         <svg
           className="mr-1"
@@ -39,7 +45,7 @@ function SearchFormHome({}: Props) {
           Search
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

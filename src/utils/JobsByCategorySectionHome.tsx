@@ -1,3 +1,6 @@
+import { motion } from "framer-motion";
+
+
 type Props = {};
 
 const jobsByCategorys = [
@@ -68,7 +71,11 @@ function JobsByCategorySectionHome({}: Props) {
         </div>
         <div style={{}} className="md:grid md:grid-cols-4 md:grid-rows-2 md:gap-x-4 lg:gap-x-[1.33rem] xl:gap-x-6 2xl:gap-x-0 3xl:gap-x-4 4xl:gap-x-0 md:px-4 lg:px-0 xl:px-28 4xl:px-36 5xl:px-80 xl:place-items-center">
           {jobsByCategorys.map((category) => (
-            <div
+            <motion.div
+            initial={{y: 50, opacity: 0}}
+        whileInView={{y: 0, opacity: .99}}
+        transition={{delay: 0.5, ease: "easeOut", duration: 0.5}}
+        viewport={{once: true}}
               key={category.id}
               className={`relative overflow-hidden zoom-background cursor-pointer bg-cover bg-center h-52 xs:h-56 md:min-h-60 xl:min-h-52 w-72 xxxxs:w-80 xs:w-[23rem] md:max-w-44 xl:max-w-64 3xl:min-w-72 mb-12 xl:mb-6 rounded-lg`}
               style={{
@@ -82,7 +89,7 @@ function JobsByCategorySectionHome({}: Props) {
                 <h2 className="font-semibold">{category.heading}</h2>
                 <p className="text-sm">{category.numberOfListings} Listings</p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
         <div className="h-11 w-52 -mt-3 xl:mt-4 xl:mx-auto">
