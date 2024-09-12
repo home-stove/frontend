@@ -4,6 +4,7 @@ import { AnimatePresence } from "framer-motion";
 import { Route, Routes, useLocation } from "react-router-dom";
 import TestLogin from "./TestLogin";
 import VendorsList from "@/pages/Home/CustomerDashboard/VendorsList/VendorsList";
+import JobPosting from "@/pages/Home/CustomerDashboard/JobPosting/JobPosting";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -14,6 +15,7 @@ function AnimatedRoutes() {
         <Route path="/login" element={<Login />} />
         <Route path="/testlogin" element={<TestLogin />} />
         <Route path="/customer-dashboard/vendors" element={<VendorsList />} />
+        <Route path="/customer-dashboard/post-a-job" element={<JobPosting />} />
       </Routes>
     </AnimatePresence>
   );
