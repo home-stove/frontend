@@ -25,7 +25,7 @@ function VendorsList({}: Props) {
         </div>
         {/* The Hero Section */}
         <div
-          className="px-4 md:px-10 md:pr-96 py-9 relative"
+          className="px-4 md:px-10 xl:px-[4.5rem] 5xl:px-28 md:pr-96 py-9 relative xl:h-80 xl:mx-10 5xl:mx-24 xl:rounded-lg"
           style={{
             background:
               "linear-gradient(90deg, rgba(254,235,229,0.95) 0%, rgba(254,235,221,0.98) 40%, rgba(251,226,195,1) 100%)",
@@ -38,28 +38,30 @@ function VendorsList({}: Props) {
               alt="chef illustration"
             />
           )}
-          <div className="pb-3">
-            <h1 className="text-[1.3rem] xxxxs:text-[1.45rem] lg:text-3xl 5xl:text-4xl font-semibold">
-              Discover the Best Bakers in Your Area
-            </h1>
-          </div>
-          <div className="pb-3">
-            <p className="text-sm leading-6">
-              From custom cakes to freshly baked treats, find the perfect baker
-              for your needs.
-            </p>
-          </div>
-          <div className="flex items-center">
-            <img
-              className="scale-75"
-              src="https://storagehomestovedev.blob.core.windows.net/web/location.png?sp=r&st=2024-09-05T15:59:45Z&se=2025-09-05T23:59:45Z&spr=https&sv=2022-11-02&sr=b&sig=%2FWyXIW82fuqx4Q%2FB%2FLYbDosYOkDS%2BZQL9xcYk3TrVIk%3D"
-              alt="location pin icon"
-            />
-            <p className="text-sm">Find Bakers Near Me</p>
+          <div className="xl:flex xl:flex-col xl:justify-center xl:h-full">
+            <div className="pb-3">
+              <h1 className="text-[1.3rem] xxxxs:text-[1.45rem] lg:text-3xl 5xl:text-4xl font-semibold">
+                Discover the Best Bakers in Your Area
+              </h1>
+            </div>
+            <div className="pb-3 xl:pb-7">
+              <p className="text-sm leading-6">
+                From custom cakes to freshly baked treats, find the perfect
+                baker for your needs.
+              </p>
+            </div>
+            <div className="flex items-center">
+              <img
+                className="scale-75"
+                src="https://storagehomestovedev.blob.core.windows.net/web/location.png?sp=r&st=2024-09-05T15:59:45Z&se=2025-09-05T23:59:45Z&spr=https&sv=2022-11-02&sr=b&sig=%2FWyXIW82fuqx4Q%2FB%2FLYbDosYOkDS%2BZQL9xcYk3TrVIk%3D"
+                alt="location pin icon"
+              />
+              <p className="text-sm">Find Bakers Near Me</p>
+            </div>
           </div>
         </div>
         {/* The Bakers list section */}
-        <div className="px-4 md:px-10 py-7 lg:flex lg:gap-x-14">
+        <div className="px-4 md:px-10 py-7 lg:py-14 xl:py-20 5xl:py-24 5xl:px-52 xl:px-28 lg:flex lg:gap-x-14">
           {isDesktop ? (
             <div className="pb-4 lg:w-1/4">
               <VendorsFilterSection />
@@ -87,15 +89,15 @@ function VendorsList({}: Props) {
             </div>
           )}
           <div className="lg:w-3/4">
-            <div className="lg:flex lg:items-end lg:justify-between">
-              <div className="pb-4 lg:h-full">
+            <div className="lg:flex lg:items-center lg:justify-between">
+              <div className="pb-4 lg:pb-0 lg:h-full">
                 <p className="text-sm">Showing all 8 reults</p>
               </div>
               <div className="w-48 h-11 border border-[#e9e9e9] rounded-lg">
                 <SortByCombobox />
               </div>
             </div>
-            <div>
+            <div className="lg:-mt-7">
               <VendorCards />
             </div>
           </div>

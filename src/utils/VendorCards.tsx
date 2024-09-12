@@ -91,7 +91,7 @@ function VendorCards({}: Props) {
     <div className="text-[#0c0c0c] my-9">
       {vendors.map((vendor) => (
         <div
-          className="relative text-sm my-7 px-4 py-7 border border-[#e9e9e9]"
+          className="relative text-sm my-7 px-4 py-7 lg:p-8 border border-[#e9e9e9]"
           key={vendor.id}
           style={{
             boxShadow:
