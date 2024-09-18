@@ -7,7 +7,7 @@ import { useState } from "react";
 
 type Props = {};
 
-function VendorsList({}: Props) {
+function Vendors({}: Props) {
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   const [isDesktop, setIsDesktop] = useState(window.innerWidth > 900);
 
@@ -62,35 +62,12 @@ function VendorsList({}: Props) {
         </div>
         {/* The Bakers list section */}
         <div className="px-4 md:px-10 py-7 lg:py-14 xl:py-20 5xl:py-24 5xl:px-52 xl:px-28 lg:flex lg:gap-x-14">
-          {isDesktop ? (
-            <div className="pb-4 lg:w-1/4">
-              <VendorsFilterSection />
-            </div>
-          ) : (
-            <div className="pb-4">
-              <button className="border border-[#e9e9e9] bg-[#f2fcfb] rounded-lg flex items-center justify-center gap-x-1 w-28 h-11">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    fill="none"
-                    stroke="#0c0c0c"
-                    strokeLinecap="round"
-                    strokeMiterlimit={10}
-                    strokeWidth={1.5}
-                    d="M21.25 12H8.895m-4.361 0H2.75m18.5 6.607h-5.748m-4.361 0H2.75m18.5-13.214h-3.105m-4.361 0H2.75m13.214 2.18a2.18 2.18 0 1 0 0-4.36a2.18 2.18 0 0 0 0 4.36Zm-9.25 6.607a2.18 2.18 0 1 0 0-4.36a2.18 2.18 0 0 0 0 4.36Zm6.607 6.608a2.18 2.18 0 1 0 0-4.361a2.18 2.18 0 0 0 0 4.36Z"
-                  ></path>
-                </svg>
-                <span className="text-sm">Filter</span>
-              </button>
-            </div>
-          )}
+          <div className="pb-4 lg:w-1/4 mb-7">
+            <VendorsFilterSection />
+          </div>          
           <div className="lg:w-3/4">
-            <div className="lg:flex lg:items-center lg:justify-between">
-              <div className="pb-4 lg:pb-0 lg:h-full">
+            <div className="md:flex md:items-center md:justify-between">
+              <div className="pb-4 md:pb-0 md:h-full">
                 <p className="text-sm">Showing all 8 reults</p>
               </div>
               <div className="w-48 h-11 border border-[#e9e9e9] rounded-lg">
@@ -110,4 +87,4 @@ function VendorsList({}: Props) {
   );
 }
 
-export default VendorsList;
+export default Vendors;

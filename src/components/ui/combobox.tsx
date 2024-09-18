@@ -226,7 +226,7 @@ export function SpecialityFilterCombobox() {
           </svg>
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-48 md:max-w-52 p-0 font-montserrat">
+      <PopoverContent className="w-72 xxxxs:w-80 xxs:w-[22rem] xs:w-96 md:w-[43rem] lg:w-full xl:w-60 2xl:w-64 3xl:w-72 4xl:w-[19.75rem] 5xl:w-[22.75rem] p-0 font-montserrat">
         <Command className="max-h-40">
           <CommandList>
             <CommandEmpty>No sorting selected.</CommandEmpty>
@@ -284,7 +284,7 @@ export function CityFilterCombobox() {
           </svg>
         </Button>
       </PopoverTrigger>
-      <PopoverContent className="w-48 md:max-w-52 p-0 font-montserrat">
+      <PopoverContent className="w-72 xxxxs:w-80 xxs:w-[22rem] xs:w-96 md:w-[43rem] lg:w-full xl:w-60 2xl:w-64 3xl:w-72 4xl:w-[19.75rem] 5xl:w-[22.75rem] p-0 font-montserrat">
         <Command className="max-h-40">
           <CommandList>
             <CommandEmpty>No sorting selected.</CommandEmpty>
