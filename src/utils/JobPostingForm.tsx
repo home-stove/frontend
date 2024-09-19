@@ -70,7 +70,8 @@ export default function JobPostingForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="w-full max-w-[1280px] mx-auto p-4 xxxxs:p-6 md:p-8 space-y-6 bg-white shadow-lg rounded-lg">
+    <form onSubmit={handleSubmit} className="w-full mx-auto p-4 xxxxs:p-6 md:p-8 space-y-6 bg-white shadow-lg rounded-lg md:flex md:gap-x-9 5xl:gap-x-14 md:h-[50rem]">
+      <div className='md:w-2/3 lg:w-1/2 md:flex md:flex-col md:justify-between'>
       <div className="space-y-2">
         <Label htmlFor="jobTitle" className="text-sm xxxxs:text-base">Job Title</Label>
         <Input
@@ -127,7 +128,7 @@ export default function JobPostingForm() {
       </div>
 
       <div className="space-y-2">
-        <Label htmlFor="deliveryDate" className="text-sm xxxxs:text-base">Delivery Date and Time</Label>
+        <Label htmlFor="deliveryDate" className="text-sm xxxxs:text-base">Delivery Date</Label>
         <Popover>
           <PopoverTrigger asChild>
             <Button
@@ -187,7 +188,9 @@ export default function JobPostingForm() {
           />
         </div>
       </div>
+      </div>
 
+      <div className='md:flex md:flex-col md:justify-between xl:w-1/2'>
       <div className="space-y-2">
         <Label htmlFor="email" className="text-sm xxxxs:text-base">Contact Email</Label>
         <Input
@@ -252,6 +255,7 @@ export default function JobPostingForm() {
       </div>
 
       <button type='submit' className="h-10 rounded-md w-full text-sm xxxxs:text-base bg-[#5bbb7b] text-white cursor-pointer">Submit Job Posting</button>
+      </div>
     </form>
   )
 }

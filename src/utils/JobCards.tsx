@@ -177,16 +177,22 @@ function JobCards({}: Props) {
           <div className="">
             {/* Job Title */}
             <div className="pb-1">
-              <h1 className="text-lg font-semibold">{job.title}</h1>
+              <h1 className="text-lg md:text-2xl font-semibold">{job.title}</h1>
             </div>
             {/* Posted by / when / bids */}
-            <div className="flex justify-between pb-7">
-              <p className="text-[#26ae61] text-xs">{job.posterName}</p>
-              <p className="text-[#26ae61] text-xs">{getDaysAgo(job.postedOn)}</p>
-              <p className="text-[#26ae61] text-xs">{job.bids} Bids</p>
+            <div className="flex gap-x-5 pb-7">
+              <p className="text-[#26ae61] text-xs md:text-sm">
+                {job.posterName}
+              </p>
+              <p className="text-[#26ae61] text-xs md:text-sm">
+                {getDaysAgo(job.postedOn)}
+              </p>
+              <p className="text-[#26ae61] text-xs md:text-sm">
+                {job.bids} Bids
+              </p>
             </div>
             {/* Icons Container */}
-            <div className="flex flex-col gap-y-2 pb-5">
+            <div className="flex flex-col gap-y-2 pb-5 md:grid md:grid-rows-2 md:grid-cols-2">
               <div className="flex items-center gap-x-2">
                 <img
                   className="h-5 w-5"
@@ -203,6 +209,7 @@ function JobCards({}: Props) {
                 />
                 <p className="text-[#797979]">{job.distance}</p>
               </div>
+
               <div className="flex items-center gap-x-2">
                 <img
                   className="h-5 w-5"
