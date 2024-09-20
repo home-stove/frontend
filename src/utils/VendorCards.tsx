@@ -152,7 +152,7 @@ function VendorCards({}: Props) {
             <div className="flex items-center gap-x-2">
               <img
                 className="h-5 w-5"
-                src="https://storagehomestovedev.blob.core.windows.net/web/pin.png?sp=r&st=2024-09-05T22:48:39Z&se=2025-09-06T06:48:39Z&spr=https&sv=2022-11-02&sr=b&sig=F47ZhNp00LfTDVXN64VMcxB4E4dCgwDankK3AN8GOSM%3D"
+                src="https://storagehomestovedev.blob.core.windows.net/web/pin%20(1).png?sp=r&st=2024-09-18T17:12:19Z&se=2025-09-19T01:12:19Z&spr=https&sv=2022-11-02&sr=b&sig=EmWpJMF7UMkaXJzeAgs6rY31WGPEgrJtEHV86a6K7xY%3D"
                 alt="location pin"
               />
               <p className="text-[#797979]">{vendor.location}</p>
@@ -160,7 +160,7 @@ function VendorCards({}: Props) {
             <div className="flex items-center gap-x-2">
               <img
                 className="h-5 w-5"
-                src="https://storagehomestovedev.blob.core.windows.net/web/route.png?sp=r&st=2024-09-05T23:00:53Z&se=2025-09-06T07:00:53Z&spr=https&sv=2022-11-02&sr=b&sig=oZ1Ns%2FzdpiEBlKCf3mBWBU4pD%2Fc%2F8rbbdJZXTehMhhA%3D"
+                src="https://storagehomestovedev.blob.core.windows.net/web/routing.png?sp=r&st=2024-09-18T17:08:36Z&se=2025-09-19T01:08:36Z&spr=https&sv=2022-11-02&sr=b&sig=Kgwx2XHO5ow94CFQaktUDxeyxm%2Bh2%2FQHy%2BUrQfxa5Aw%3D"
                 alt="route"
               />
               <p className="text-[#797979]">{vendor.distance}</p>
@@ -186,7 +186,7 @@ function VendorCards({}: Props) {
           {/* View Profile */}
           <div>
             <Link
-              to={`/customer-dashboard/vendors/${vendor.id}`}
+              to={`/customer-dashboard/explore-vendors/${vendor.id}`}
               className="transition-all w-36 h-11 bg-[#5bbb7b] bg-opacity-15 hover:bg-opacity-100 hover:text-white flex items-center justify-center text-[#26ae61] font-semibold rounded-lg"
             >
               View Profile

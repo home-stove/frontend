@@ -207,14 +207,14 @@ function JobCards({}: Props) {
                   src="https://storagehomestovedev.blob.core.windows.net/web/routing.png?sp=r&st=2024-09-18T17:08:36Z&se=2025-09-19T01:08:36Z&spr=https&sv=2022-11-02&sr=b&sig=Kgwx2XHO5ow94CFQaktUDxeyxm%2Bh2%2FQHy%2BUrQfxa5Aw%3D"
                   alt="route"
                 />
-                <p className="text-[#797979]">{job.distance}</p>
+                <p className="text-[#797979]">{job.distance} miles</p>
               </div>
 
               <div className="flex items-center gap-x-2">
                 <img
                   className="h-5 w-5"
                   src="https://storagehomestovedev.blob.core.windows.net/web/deadline%20(1).png?sp=r&st=2024-09-18T16:59:03Z&se=2025-09-19T00:59:03Z&spr=https&sv=2022-11-02&sr=b&sig=59PZb2JS9KP6OGYI9cm2QkZmEiKQztN%2BnvDXR9wZhEw%3D"
-                  alt="location pin"
+                  alt="sand flask"
                 />
                 <p className="text-[#797979]">{getDaysLeft(job.deadline)}</p>
               </div>
@@ -222,7 +222,7 @@ function JobCards({}: Props) {
                 <img
                   className="h-5 w-5"
                   src="https://storagehomestovedev.blob.core.windows.net/web/money.png?sp=r&st=2024-09-18T17:22:36Z&se=2025-09-19T01:22:36Z&spr=https&sv=2022-11-02&sr=b&sig=%2BoRvPIXvmAt29tpoQHe0SylnNWEmH8zVp0Nu3api1zE%3D"
-                  alt="route"
+                  alt="cash"
                 />
                 <p className="text-[#797979]">${job.budget.min}</p>
                 <p className="text-[#797979]">to</p>
@@ -247,7 +247,7 @@ function JobCards({}: Props) {
             {/* Bid Button */}
             <div>
               <Link
-                to={`/customer-dashboard/vendors/${job.id}`}
+                to={`/baker-dashboard/explore-jobs/${job.id}`}
                 className="transition-all w-36 h-11 bg-[#5bbb7b] bg-opacity-15 hover:bg-opacity-100 hover:text-white flex items-center justify-center text-[#26ae61] font-semibold rounded-lg"
               >
                 Bid Now

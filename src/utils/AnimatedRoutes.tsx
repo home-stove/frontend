@@ -6,6 +6,8 @@ import TestLogin from "./TestLogin";
 import Vendors from "@/pages/CustomerDashboard/Vendors/Vendors";
 import JobPosting from "@/pages/CustomerDashboard/JobPosting/JobPosting";
 import ExploreJobs from "@/pages/VendorDashboard/ExploreJobs/ExploreJobs";
+import JobDetails from "@/pages/VendorDashboard/JobDetails/JobDetails";
+import VendorDetails from "@/pages/CustomerDashboard/Vendors/VendorDetails/VendorDetails";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -16,8 +18,10 @@ function AnimatedRoutes() {
         <Route path="/login" element={<Login />} />
         <Route path="/testlogin" element={<TestLogin />} />
         <Route path="/customer-dashboard/explore-vendors" element={<Vendors />} />
+        <Route path="/customer-dashboard/explore-vendors/:vendorId" element={<VendorDetails />} />
         <Route path="/customer-dashboard/post-a-job" element={<JobPosting />} />
         <Route path="/baker-dashboard/explore-jobs" element={<ExploreJobs />} />
+        <Route path="/baker-dashboard/explore-jobs/:jobId" element={<JobDetails />} />
       </Routes>
     </AnimatePresence>
   );
