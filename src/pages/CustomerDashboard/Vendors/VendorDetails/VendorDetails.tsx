@@ -113,7 +113,7 @@ function VendorDetails({}: Props) {
         </div>
         {/* The Hero Section */}
         <div
-          className="px-4 md:px-10 xl:px-[4.5rem] 5xl:px-28 md:pr-96 py-7 relative xl:h-80 xl:mx-10 5xl:mx-24 xl:rounded-lg"
+          className="px-4 xxs:px-7 md:px-10 xl:px-[4.5rem] 5xl:px-28 md:pr-96 py-7 relative xl:h-80 xl:mx-10 5xl:mx-24 xl:rounded-lg"
           style={{
             background:
               "linear-gradient(90deg, rgba(254,235,229,0.95) 0%, rgba(254,235,221,0.98) 40%, rgba(251,226,195,1) 100%)",
@@ -175,7 +175,7 @@ function VendorDetails({}: Props) {
           </div>
         </div>
         {/* The Icons Section */}
-        <div className="grid grid-cols-2 grid-rows-2 gap-y-4 gap-x-1 my-9 px-4">
+        <div className="grid grid-cols-2 grid-rows-2 gap-y-4 gap-x-1 my-9 px-4 xxs:px-7">
           <div className="flex gap-x-2 items-center">
             <svg
               className="h-10 w-10"
@@ -268,7 +268,7 @@ function VendorDetails({}: Props) {
           </div>
         </div>
         {/* About Section */}
-        <div className="px-4 my-9">
+        <div className="px-4 xxs:px-7 my-9">
           <h2 className="text-xl text-[#0c0c0c] font-semibold">
             About {bakerProfile.name}
           </h2>
@@ -280,42 +280,42 @@ function VendorDetails({}: Props) {
           <div className="my-9 border-b w-full"></div>
         </div>
         {/* Portfolio Section */}
-        <div className="px-4 my-9">
+        <div className="px-4 xxs:px-7 my-9">
           <h2 className="text-xl text-[#0c0c0c] font-semibold pb-5">
             {bakerProfile.name}'s Portfolio
           </h2>
           <div className="flex flex-col items-center gap-y-11">
             <div>
               <img
-                className="h-52 w-72 rounded-lg"
+                className="h-52 xs:h-56 w-72 xs:w-[23rem] xxxxs:w-80 rounded-lg"
                 src={bakerProfile.portfolio[0].image}
                 alt=""
               />
             </div>
             <div>
               <img
-                className="h-52 w-72 rounded-lg"
+                className="h-52 xs:h-56 w-72 xs:w-[23rem] xxxxs:w-80 rounded-lg"
                 src={bakerProfile.portfolio[1].image}
                 alt=""
               />
             </div>
             <div>
               <img
-                className="h-52 w-72 rounded-lg"
+                className="h-52 xs:h-56 w-72 xs:w-[23rem] xxxxs:w-80 rounded-lg"
                 src={bakerProfile.portfolio[2].image}
                 alt=""
               />
             </div>
             <div>
               <img
-                className="h-52 w-72 rounded-lg"
+                className="h-52 xs:h-56 w-72 xs:w-[23rem] xxxxs:w-80 rounded-lg"
                 src="https://storagehomestovedev.blob.core.windows.net/web/demoPortfolioPic04.jpg?sp=r&st=2024-09-23T13:29:44Z&se=2025-09-23T21:29:44Z&spr=https&sv=2022-11-02&sr=b&sig=el0GbdRyYfMktFWsqygCDiRopwj1RVnr9M1u4wb4p3U%3D"
                 alt=""
               />
             </div>
             <div>
               <img
-                className="h-52 w-72 rounded-lg"
+                className="h-52 xs:h-56 w-72 xs:w-[23rem] xxxxs:w-80 rounded-lg"
                 src="https://storagehomestovedev.blob.core.windows.net/web/demoPortfolioPic05.jpg?sp=r&st=2024-09-23T13:30:04Z&se=2025-09-23T21:30:04Z&spr=https&sv=2022-11-02&sr=b&sig=ohj7rBiDZlZOEAq%2FKBvTxT2RdYe0%2Fj%2BgLXUPDWPhTTA%3D"
                 alt=""
               />
@@ -324,7 +324,7 @@ function VendorDetails({}: Props) {
           <div className="my-9 border-b w-full"></div>
         </div>
         {/* Reviews Section */}
-        <div className="px-4 my-9">
+        <div className="px-4 xxs:px-7 my-9">
           <h2 className="text-xl text-[#0c0c0c] font-semibold pb-5">
             Recent Reviews
           </h2>
@@ -333,7 +333,7 @@ function VendorDetails({}: Props) {
           <div className="my-9 border-b w-full"></div>
         </div>
         {/* Contact & Socials Section */}
-        <div className="px-4 my-9">
+        <div className="px-4 xxs:px-7 my-9">
           <div className="flex flex-col gap-y-3">
             <div className="flex items-center gap-x-3">
               <svg
