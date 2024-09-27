@@ -103,237 +103,246 @@ function VendorDetails({}: Props) {
       <div>
         <Header />
       </div>
-      <main className="relative font-montserrat">
-        {/* The route for this page */}
-        <div className="px-4 md:px-10 py-5">
-          <p className="text-sm text-[#0c0c0c]">
-            Home / Vendors
-            <span className="text-[#a2a2a2]"> / {bakerProfile.name}</span>
-          </p>
-        </div>
-        {/* The Hero Section */}
-        <div
-          className="px-4 xxs:px-7 md:px-10 xl:px-[4.5rem] 5xl:px-28 md:pr-96 py-7 relative xl:h-80 xl:mx-10 5xl:mx-24 xl:rounded-lg"
-          style={{
-            background:
-              "linear-gradient(90deg, rgba(254,235,229,0.95) 0%, rgba(254,235,221,0.98) 40%, rgba(251,226,195,1) 100%)",
-          }}
-        >
-          {/* The Baker Details */}
-          <div className="text-[#0c0c0c]">
-            <Avatar className="w-24 h-24 xxxs:h-24 xxxs:w-24 mb-3">
-              <AvatarImage src="https://github.com/shadcn.png" />
-              <AvatarFallback>CN</AvatarFallback>
-            </Avatar>
-
-            <h2 className="font-semibold text-xl mb-0.5">
-              {bakerProfile.name}
-            </h2>
-            <h3 className="text-sm mb-7">{bakerProfile.profession}</h3>
-
-            <div className="grid grid-cols-2 grid-rows-2 gap-y-3 gap-x-2">
-              <div className="flex items-center">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="1em"
-                  height="1em"
-                  viewBox="0 0 15 15"
-                >
-                  <path
-                    fill="#e7b900"
-                    d="M7.223.666a.3.3 0 0 1 .554 0L9.413 4.6a.3.3 0 0 0 .253.184l4.248.34a.3.3 0 0 1 .171.528L10.85 8.424a.3.3 0 0 0-.097.297l.99 4.145a.3.3 0 0 1-.45.326L7.657 10.97a.3.3 0 0 0-.312 0l-3.637 2.222a.3.3 0 0 1-.448-.326l.989-4.145a.3.3 0 0 0-.097-.297L.915 5.652a.3.3 0 0 1 .171-.527l4.248-.34a.3.3 0 0 0 .253-.185z"
-                  ></path>
-                </svg>
-                <p className="font-semibold text-sm">
-                  &nbsp;{bakerProfile.rating}
-                </p>
-                <p className="text-[#797979] text-sm">
-                  &nbsp;({bakerProfile.numberOfReviews} Reviews)
-                </p>
-              </div>
-              <div className="flex items-center gap-x-2">
-                <img
-                  className="h-5 w-5"
-                  src="https://storagehomestovedev.blob.core.windows.net/web/pin%20(2).png?sp=r&st=2024-09-20T15:19:45Z&se=2025-09-20T23:19:45Z&spr=https&sv=2022-11-02&sr=b&sig=oNWzdfb8HPWnJT1YvWtqqUaFg%2Fzd0WLWwPODJMgP54Y%3D"
-                  alt="location pin"
-                />
-                <p className="text-[#797979] text-sm">
-                  {bakerProfile.location}
-                </p>
-              </div>
-              <div className="flex items-center gap-x-2 col-span-2">
-                <img
-                  className="h-5 w-5"
-                  src="https://storagehomestovedev.blob.core.windows.net/web/calendar.png?sp=r&st=2024-09-20T15:56:21Z&se=2025-09-20T23:56:21Z&spr=https&sv=2022-11-02&sr=b&sig=RS6laxNyjjG%2FEA1nGzZfRWJihIdSariXbwOyKVNoizE%3D"
-                  alt="location pin"
-                />
-                <p className="text-[#797979] text-sm">
-                  Joined {calculateAccountAge(bakerProfile.joiningDate)} ago
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        {/* The Icons Section */}
-        <div className="grid grid-cols-2 grid-rows-2 gap-y-4 gap-x-1 my-9 px-4 xxs:px-7">
-          <div className="flex gap-x-2 items-center">
-            <svg
-              className="h-10 w-10"
-              xmlns="http://www.w3.org/2000/svg"
-              width="2em"
-              height="2em"
-              viewBox="0 0 14 14"
-            >
-              <g
-                fill="none"
-                stroke="#0c0c0c"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M13.48 7.516a6.5 6.5 0 1 1-6.93-7"></path>
-                <path d="M9.79 8.09A3 3 0 1 1 5.9 4.21M7 7l2.5-2.5m2 .5l-2-.5l-.5-2l2-2l.5 2l2 .5z"></path>
-              </g>
-            </svg>
-            <div>
-              <h3 className="text-xs ">Jobs Completed</h3>
-              <p className="text-xs ">{bakerProfile.jobsCompleted}</p>
-            </div>
-          </div>
-          <div className="flex gap-x-2 items-center">
-            <svg
-              className="h-10 w-10"
-              xmlns="http://www.w3.org/2000/svg"
-              width="2em"
-              height="2em"
-              viewBox="0 0 32 32"
-            >
-              <path
-                fill="#0c0c0c"
-                d="M10.28 5.28L7 8.563l-1.28-1.28L4.28 8.72l2 2l.72.686l.72-.687l4-4zM15 7v2h13V7zm-4.72 6.28L7 16.564L5.72 15.28l-1.44 1.44l2 2l.72.686l.72-.687l4-4l-1.44-1.44zM15 15v2h13v-2zm-4.72 6.28L7 24.563l-1.28-1.28l-1.44 1.437l2 2l.72.686l.72-.687l4-4l-1.44-1.44zM15 23v2h13v-2z"
-              ></path>
-            </svg>
-            <div>
-              <h3 className="text-xs ">Onging Jobs</h3>
-              <p className="text-xs ">{bakerProfile.ongoingJobs}</p>
-            </div>
-          </div>
-          <div className="flex gap-x-2 items-center">
-            <svg
-              className="h-10 w-10"
-              xmlns="http://www.w3.org/2000/svg"
-              width="2em"
-              height="2em"
-              viewBox="0 0 24 24"
-            >
-              <g
-                fill="none"
-                stroke="#0c0c0c"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={1.5}
-                color="#0c0c0c"
-              >
-                <path d="M19.5 19.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0m-10 0a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0"></path>
-                <path d="M2 12v5c0 .935 0 1.402.201 1.75a1.5 1.5 0 0 0 .549.549c.348.201.815.201 1.75.201m10 0h-5m5.5-2V9c0-1.414 0-2.121-.44-2.56C14.122 6 13.415 6 12 6h-1m4.5 2.5h1.801c.83 0 1.245 0 1.589.195c.344.194.557.55.984 1.262l1.699 2.83c.212.354.318.532.373.728c.054.197.054.403.054.816V17c0 .935 0 1.402-.201 1.75a1.5 1.5 0 0 1-.549.549c-.348.201-.815.201-1.75.201M7.85 7.85l-1.35-.9V4.7M2 6.5a4.5 4.5 0 1 0 9 0a4.5 4.5 0 0 0-9 0"></path>
-              </g>
-            </svg>
-            <div>
-              <h3 className="text-xs ">Average Delivery Time</h3>
-              <p className="text-xs ">
-                {bakerProfile.stats.averageDeliveryTime}
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-x-2 items-center">
-            <svg
-              className="h-10 w-10"
-              xmlns="http://www.w3.org/2000/svg"
-              width="2em"
-              height="2em"
-              viewBox="0 0 14 14"
-            >
-              <g
-                fill="none"
-                stroke="#0c0c0c"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <path d="M7.002 7.25a.25.25 0 0 1 0-.5m0 .5a.25.25 0 0 0 0-.5m-2.75.5a.25.25 0 0 1 0-.5m0 .5a.25.25 0 0 0 0-.5m5.5.5a.25.25 0 0 1 0-.5m0 .5a.25.25 0 1 0 0-.5"></path>
-                <path d="M6.998.56a6.44 6.44 0 0 0-5.36 10.007L.558 13.44l3.617-.654A6.44 6.44 0 1 0 6.998.56"></path>
-              </g>
-            </svg>
-            <div>
-              <p className="text-xs ">{bakerProfile.stats.responseRate}</p>
-            </div>
-          </div>
-        </div>
-        {/* About Section */}
-        <div className="px-4 xxs:px-7 my-9">
-          <h2 className="text-xl text-[#0c0c0c] font-semibold">
-            About {bakerProfile.name}
-          </h2>
-          {paragraphs.map((paragraph, index) => (
-            <p key={index} className="text-sm text-[#6b7177] mt-2 leading-7">
-              {paragraph}
+      <main className="relative font-montserrat lg:pt-20 xl:flex">
+        <div>
+          {/* The route for this page */}
+          <div className="px-4 md:px-10 py-5">
+            <p className="text-sm text-[#0c0c0c]">
+              Home / Vendors
+              <span className="text-[#a2a2a2]"> / {bakerProfile.name}</span>
             </p>
-          ))}
-          <div className="my-9 border-b w-full"></div>
-        </div>
-        {/* Portfolio Section */}
-        <div className="px-4 xxs:px-7 my-9">
-          <h2 className="text-xl text-[#0c0c0c] font-semibold pb-5">
-            {bakerProfile.name}'s Portfolio
-          </h2>
-          <div className="flex flex-col items-center gap-y-11">
-            <div>
-              <img
-                className="h-52 xs:h-56 w-72 xs:w-[23rem] xxxxs:w-80 rounded-lg"
-                src={bakerProfile.portfolio[0].image}
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-52 xs:h-56 w-72 xs:w-[23rem] xxxxs:w-80 rounded-lg"
-                src={bakerProfile.portfolio[1].image}
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-52 xs:h-56 w-72 xs:w-[23rem] xxxxs:w-80 rounded-lg"
-                src={bakerProfile.portfolio[2].image}
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-52 xs:h-56 w-72 xs:w-[23rem] xxxxs:w-80 rounded-lg"
-                src="https://storagehomestovedev.blob.core.windows.net/web/demoPortfolioPic04.jpg?sp=r&st=2024-09-23T13:29:44Z&se=2025-09-23T21:29:44Z&spr=https&sv=2022-11-02&sr=b&sig=el0GbdRyYfMktFWsqygCDiRopwj1RVnr9M1u4wb4p3U%3D"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                className="h-52 xs:h-56 w-72 xs:w-[23rem] xxxxs:w-80 rounded-lg"
-                src="https://storagehomestovedev.blob.core.windows.net/web/demoPortfolioPic05.jpg?sp=r&st=2024-09-23T13:30:04Z&se=2025-09-23T21:30:04Z&spr=https&sv=2022-11-02&sr=b&sig=ohj7rBiDZlZOEAq%2FKBvTxT2RdYe0%2Fj%2BgLXUPDWPhTTA%3D"
-                alt=""
-              />
+          </div>
+          {/* The Hero Section */}
+          <div
+            className="px-4 xxs:px-7 md:px-10 xl:px-[4.5rem] 5xl:px-28 py-7 relative md:h-56 xl:h-64 xl:mx-10 5xl:mx-24 xl:rounded-lg md:flex md:items-center"
+            style={{
+              background:
+                "linear-gradient(90deg, rgba(254,235,229,0.95) 0%, rgba(254,235,221,0.98) 40%, rgba(251,226,195,1) 100%)",
+            }}
+          >
+            {/* The Baker Details */}
+            <div className="text-[#0c0c0c] md:flex md:gap-x-10 md:items-center">
+              <Avatar className="w-24 h-24 md:w-32 md:h-32 xxxs:h-24 xxxs:w-24 mb-3">
+                <AvatarImage src="https://github.com/shadcn.png" />
+                <AvatarFallback>CN</AvatarFallback>
+              </Avatar>
+              <div className="md:flex md:flex-col md:justify-center">
+                <h2 className="font-semibold text-xl mb-0.5">
+                  {bakerProfile.name}
+                </h2>
+                <h3 className="text-sm mb-7">{bakerProfile.profession}</h3>
+
+                <div className="grid grid-cols-2 grid-rows-2 gap-y-3 gap-x-2 md:flex md:gap-x-10">
+                  <div className="flex items-center">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="1em"
+                      height="1em"
+                      viewBox="0 0 15 15"
+                    >
+                      <path
+                        fill="#e7b900"
+                        d="M7.223.666a.3.3 0 0 1 .554 0L9.413 4.6a.3.3 0 0 0 .253.184l4.248.34a.3.3 0 0 1 .171.528L10.85 8.424a.3.3 0 0 0-.097.297l.99 4.145a.3.3 0 0 1-.45.326L7.657 10.97a.3.3 0 0 0-.312 0l-3.637 2.222a.3.3 0 0 1-.448-.326l.989-4.145a.3.3 0 0 0-.097-.297L.915 5.652a.3.3 0 0 1 .171-.527l4.248-.34a.3.3 0 0 0 .253-.185z"
+                      ></path>
+                    </svg>
+                    <p className="font-semibold text-sm">
+                      &nbsp;{bakerProfile.rating}
+                    </p>
+                    <p className="text-[#797979] text-sm">
+                      &nbsp;({bakerProfile.numberOfReviews} Reviews)
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-x-2">
+                    <img
+                      className="h-5 w-5"
+                      src="https://storagehomestovedev.blob.core.windows.net/web/pin%20(2).png?sp=r&st=2024-09-20T15:19:45Z&se=2025-09-20T23:19:45Z&spr=https&sv=2022-11-02&sr=b&sig=oNWzdfb8HPWnJT1YvWtqqUaFg%2Fzd0WLWwPODJMgP54Y%3D"
+                      alt="location pin"
+                    />
+                    <p className="text-[#797979] text-sm">
+                      {bakerProfile.location}
+                    </p>
+                  </div>
+                  <div className="flex items-center gap-x-2 col-span-2">
+                    <img
+                      className="h-5 w-5"
+                      src="https://storagehomestovedev.blob.core.windows.net/web/calendar.png?sp=r&st=2024-09-20T15:56:21Z&se=2025-09-20T23:56:21Z&spr=https&sv=2022-11-02&sr=b&sig=RS6laxNyjjG%2FEA1nGzZfRWJihIdSariXbwOyKVNoizE%3D"
+                      alt="location pin"
+                    />
+                    <p className="text-[#797979] text-sm">
+                      Joined {calculateAccountAge(bakerProfile.joiningDate)} ago
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-          <div className="my-9 border-b w-full"></div>
-        </div>
-        {/* Reviews Section */}
-        <div className="px-4 xxs:px-7 my-9">
-          <h2 className="text-xl text-[#0c0c0c] font-semibold pb-5">
-            Recent Reviews
-          </h2>
-          <ReviewCards reviews={bakerProfile.reviews} />
-          <ReviewForm />
-          <div className="my-9 border-b w-full"></div>
+          {/* The Icons Section */}
+          <div className="grid grid-cols-2 grid-rows-2 gap-y-4 md:gap-6 gap-x-1 my-9 px-4 xxs:px-7 lg:px-10 5xl:px-24">
+            <div className="flex gap-x-2 items-center">
+              <svg
+                className="h-10 w-10"
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                viewBox="0 0 14 14"
+              >
+                <g
+                  fill="none"
+                  stroke="#0c0c0c"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M13.48 7.516a6.5 6.5 0 1 1-6.93-7"></path>
+                  <path d="M9.79 8.09A3 3 0 1 1 5.9 4.21M7 7l2.5-2.5m2 .5l-2-.5l-.5-2l2-2l.5 2l2 .5z"></path>
+                </g>
+              </svg>
+              <div>
+                <h3 className="text-xs ">Jobs Completed</h3>
+                <p className="text-xs ">{bakerProfile.jobsCompleted}</p>
+              </div>
+            </div>
+            <div className="flex gap-x-2 items-center">
+              <svg
+                className="h-10 w-10"
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                viewBox="0 0 32 32"
+              >
+                <path
+                  fill="#0c0c0c"
+                  d="M10.28 5.28L7 8.563l-1.28-1.28L4.28 8.72l2 2l.72.686l.72-.687l4-4zM15 7v2h13V7zm-4.72 6.28L7 16.564L5.72 15.28l-1.44 1.44l2 2l.72.686l.72-.687l4-4l-1.44-1.44zM15 15v2h13v-2zm-4.72 6.28L7 24.563l-1.28-1.28l-1.44 1.437l2 2l.72.686l.72-.687l4-4l-1.44-1.44zM15 23v2h13v-2z"
+                ></path>
+              </svg>
+              <div>
+                <h3 className="text-xs ">Onging Jobs</h3>
+                <p className="text-xs ">{bakerProfile.ongoingJobs}</p>
+              </div>
+            </div>
+            <div className="flex gap-x-2 items-center">
+              <svg
+                className="h-10 w-10"
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                viewBox="0 0 24 24"
+              >
+                <g
+                  fill="none"
+                  stroke="#0c0c0c"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={1.5}
+                  color="#0c0c0c"
+                >
+                  <path d="M19.5 19.5a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0m-10 0a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0"></path>
+                  <path d="M2 12v5c0 .935 0 1.402.201 1.75a1.5 1.5 0 0 0 .549.549c.348.201.815.201 1.75.201m10 0h-5m5.5-2V9c0-1.414 0-2.121-.44-2.56C14.122 6 13.415 6 12 6h-1m4.5 2.5h1.801c.83 0 1.245 0 1.589.195c.344.194.557.55.984 1.262l1.699 2.83c.212.354.318.532.373.728c.054.197.054.403.054.816V17c0 .935 0 1.402-.201 1.75a1.5 1.5 0 0 1-.549.549c-.348.201-.815.201-1.75.201M7.85 7.85l-1.35-.9V4.7M2 6.5a4.5 4.5 0 1 0 9 0a4.5 4.5 0 0 0-9 0"></path>
+                </g>
+              </svg>
+              <div>
+                <h3 className="text-xs ">Average Delivery Time</h3>
+                <p className="text-xs ">
+                  {bakerProfile.stats.averageDeliveryTime}
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-x-2 items-center">
+              <svg
+                className="h-10 w-10"
+                xmlns="http://www.w3.org/2000/svg"
+                width="2em"
+                height="2em"
+                viewBox="0 0 14 14"
+              >
+                <g
+                  fill="none"
+                  stroke="#0c0c0c"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M7.002 7.25a.25.25 0 0 1 0-.5m0 .5a.25.25 0 0 0 0-.5m-2.75.5a.25.25 0 0 1 0-.5m0 .5a.25.25 0 0 0 0-.5m5.5.5a.25.25 0 0 1 0-.5m0 .5a.25.25 0 1 0 0-.5"></path>
+                  <path d="M6.998.56a6.44 6.44 0 0 0-5.36 10.007L.558 13.44l3.617-.654A6.44 6.44 0 1 0 6.998.56"></path>
+                </g>
+              </svg>
+              <div>
+                <p className="text-xs ">{bakerProfile.stats.responseRate}</p>
+              </div>
+            </div>
+          </div>
+          {/* About Section */}
+          <div className="px-4 xxs:px-7 my-9 lg:px-10 5xl:px-24">
+            <h2 className="text-xl text-[#0c0c0c] font-semibold">
+              About {bakerProfile.name}
+            </h2>
+            {paragraphs.map((paragraph, index) => (
+              <p key={index} className="text-sm text-[#6b7177] mt-2 leading-7">
+                {paragraph}
+              </p>
+            ))}
+            <div className="my-9 border-b w-full"></div>
+          </div>
+          {/* Portfolio Section */}
+          <div className="px-4 xxs:px-7 my-9 lg:px-10 5xl:px-24">
+            <h2 className="text-xl text-[#0c0c0c] font-semibold pb-5">
+              {bakerProfile.name}'s Portfolio
+            </h2>
+            <div className="flex flex-col items-center gap-y-11  md:grid md:grid-cols-3 md:gap-x-6">
+              <div>
+                <img
+                  className="h-52 xs:h-56 w-72 xs:w-[23rem] xxxxs:w-80 rounded-lg"
+                  src={bakerProfile.portfolio[0].image}
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  className="h-52 xs:h-56 w-72 xs:w-[23rem] xxxxs:w-80 rounded-lg"
+                  src={bakerProfile.portfolio[1].image}
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  className="h-52 xs:h-56 w-72 xs:w-[23rem] xxxxs:w-80 rounded-lg"
+                  src={bakerProfile.portfolio[2].image}
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  className="h-52 xs:h-56 w-72 xs:w-[23rem] xxxxs:w-80 rounded-lg"
+                  src="https://storagehomestovedev.blob.core.windows.net/web/demoPortfolioPic04.jpg?sp=r&st=2024-09-23T13:29:44Z&se=2025-09-23T21:29:44Z&spr=https&sv=2022-11-02&sr=b&sig=el0GbdRyYfMktFWsqygCDiRopwj1RVnr9M1u4wb4p3U%3D"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  className="h-52 xs:h-56 w-72 xs:w-[23rem] xxxxs:w-80 rounded-lg"
+                  src="https://storagehomestovedev.blob.core.windows.net/web/demoPortfolioPic05.jpg?sp=r&st=2024-09-23T13:30:04Z&se=2025-09-23T21:30:04Z&spr=https&sv=2022-11-02&sr=b&sig=ohj7rBiDZlZOEAq%2FKBvTxT2RdYe0%2Fj%2BgLXUPDWPhTTA%3D"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div className="my-9 border-b w-full"></div>
+          </div>
+          {/* Reviews Section */}
+          <div className="px-4 xxs:px-7 my-9 lg:px-10 5xl:px-24">
+            <h2 className="text-xl text-[#0c0c0c] font-semibold pb-5">
+              Recent Reviews
+            </h2>
+            <ReviewCards reviews={bakerProfile.reviews} />
+            <ReviewForm />
+            <div className="my-9 border-b w-full"></div>
+          </div>
         </div>
         {/* Contact & Socials Section */}
-        <div className="px-4 xxs:px-7 my-9">
+        <div
+          className="px-4 xxs:px-7 my-9 xl:my-14 py-7 lg:px-10 xl:h-[32rem] xl:rounded-lg xl:sticky xl:top-0 xl:mx-10"
+          style={{
+            boxShadow:
+              "0px 6px 15px 0px rgba(64.00000000000001, 79.00000000000006, 104.00000000000004, 0.09)",
+          }}
+        >
           <div className="flex flex-col gap-y-3">
             <div className="flex items-center gap-x-3">
               <svg

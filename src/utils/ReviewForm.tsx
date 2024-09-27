@@ -10,7 +10,7 @@ function ReviewForm({}: Props) {
   const [rating, setRating] = useState(0);
 
   return (
-    <div className="w-full max-w-md mx-auto space-y-4 bg-white xxxxs:max-w-[340px] xxxs:max-w-[355px] xxs:max-w-[370px] xs:max-w-[390px] sm:max-w-[410px] md:max-w-[500px] lg:max-w-[600px] xl:max-w-[700px]">
+    <div className="w-full mx-auto md:mx-0 space-y-4 bg-white xxxxs:w-[340px] xxxs:w-[355px] xxs:w-[370px] xs:w-[390px] sm:w-[410px] md:w-full">
       <h2 className="text-xl font-bold">Add a review</h2>
 
       <div className="space-y-2">

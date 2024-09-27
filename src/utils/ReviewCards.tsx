@@ -13,7 +13,7 @@ function ReviewCards({ reviews }: Props) {
   return (
     <div>
       {reviews.map((review, index) => (
-        <div key={index} className={`w-72 ${index !== 0 && "my-5"}`}>
+        <div key={index} className={`w-72 md:w-auto ${index !== 0 && "my-5"}`}>
           <div className="flex gap-x-3">
             <Avatar className="w-16 h-16 xxxs:h-24 xxxs:w-24">
               <AvatarImage src="https://github.com/shadcn.png" />
