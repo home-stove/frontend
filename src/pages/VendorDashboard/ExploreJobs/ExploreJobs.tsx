@@ -2,15 +2,13 @@ import { SortByCombobox } from "@/components/ui/combobox";
 import Footer from "@/utils/Footer";
 import Header from "@/utils/Header";
 import JobCards from "@/utils/JobCards";
-import VendorCards from "@/utils/VendorCards";
 import VendorsFilterSection from "@/utils/VendorsFilterSection";
 import { useState } from "react";
 
 type Props = {};
 
 function ExploreJobs({}: Props) {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 900);
+  const [isMobile] = useState(window.innerWidth < 768);
   return (
     <section className="relative font-montserrat text-[#0c0c0c]">
       <div>

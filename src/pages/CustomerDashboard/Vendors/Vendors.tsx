@@ -8,8 +8,7 @@ import { useState } from "react";
 type Props = {};
 
 function Vendors({}: Props) {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 900);
+  const [isMobile] = useState(window.innerWidth < 768);
 
   return (
     <section className="relative font-montserrat text-[#0c0c0c]">

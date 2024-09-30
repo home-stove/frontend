@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useMsal } from "@azure/msal-react";
-import { loginRequest } from "../../auth/authConfig.js";
+import { loginRequest } from "../../auth/authConfig.ts";
 
 function Login() {
   const { instance, accounts } = useMsal();
