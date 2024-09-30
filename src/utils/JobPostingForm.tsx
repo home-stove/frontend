@@ -28,24 +28,24 @@ export default function JobPostingForm() {
   const [attachments, setAttachments] = useState([])
   const [errors, setErrors] = useState({})
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: { target: { name: any; value: any } }) => {
     const { name, value } = e.target
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  const handleSelectChange = (value, name) => {
+  const handleSelectChange = (value: string, name: string) => {
     setFormData(prev => ({ ...prev, [name]: value }))
   }
 
-  const handleDateChange = (date) => {
+  const handleDateChange = (date: any) => {
     setFormData(prev => ({ ...prev, deliveryDate: date }))
   }
 
-  const handleImageUpload = (e) => {
+  const handleImageUpload = (e: { target: { files: Iterable<never> | ArrayLike<never> } }) => {
     setImages(Array.from(e.target.files))
   }
 
-  const handleAttachmentUpload = (e) => {
+  const handleAttachmentUpload = (e: { target: { files: Iterable<never> | ArrayLike<never> } }) => {
     setAttachments(Array.from(e.target.files))
   }
 
@@ -61,7 +61,7 @@ export default function JobPostingForm() {
     return Object.keys(newErrors).length === 0
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: { preventDefault: () => void }) => {
     e.preventDefault()
     if (validateForm()) {
       console.log('Form submitted:', { ...formData, images, attachments })

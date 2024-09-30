@@ -3,7 +3,7 @@ import { useState } from "react";
 type Props = {};
 
 function CallToAction({}: Props) {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile] = useState(window.innerWidth < 768);
   return (
     <section className="relative font-montserrat">
       <div

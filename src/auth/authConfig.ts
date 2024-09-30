@@ -2,17 +2,17 @@ import { LogLevel } from "@azure/msal-browser";
 
 export const msalConfig = {
   auth: {
-    clientId: "26d54a27-ed6e-4fab-b119-c1b4369838e5", // Your Azure AD app's client ID
-    authority: "https://login.microsoftonline.com/f755958c-e25b-41f7-82dd-f5dc2c3572fc", // Your tenant ID
-    redirectUri: "http://localhost:5173/", // Your redirect URI
+    clientId: "26d54a27-ed6e-4fab-b119-c1b4369838e5",
+    authority: "https://login.microsoftonline.com/f755958c-e25b-41f7-82dd-f5dc2c3572fc",
+    redirectUri: "http://localhost:5173/",
   },
   cache: {
-    cacheLocation: "localStorage", // This configures where your cache will be stored
-    storeAuthStateInCookie: false, // Set to true if you're having issues on IE11 or Edge
+    cacheLocation: "localStorage",
+    storeAuthStateInCookie: false,
   },
   system: {
     loggerOptions: {
-      loggerCallback: (level, message, containsPii) => {
+      loggerCallback: (level: LogLevel, message: string, containsPii: boolean) => {
         if (containsPii) {
           return;
         }
@@ -29,8 +29,6 @@ export const msalConfig = {
           case LogLevel.Warning:
             console.warn(message);
             break;
-          default:
-            break;
         }
       },
     },
@@ -38,5 +36,5 @@ export const msalConfig = {
 };
 
 export const loginRequest = {
-  scopes: ["User.Read"], // Scopes to request for the access token
+  scopes: ["User.Read"],
 };

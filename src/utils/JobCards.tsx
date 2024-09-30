@@ -1,4 +1,3 @@
-import { Avatar, AvatarFallback, AvatarImage } from "@radix-ui/react-avatar";
 import { Link } from "react-router-dom";
 
 type Props = {};

@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 type Props = {};
 
 export default function Header({}: Props) {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 900);
+  const [isDesktop] = useState(window.innerWidth >= 900);
   const {pathname} = useLocation();
   return (
     <header className={`relative h-20 ${pathname === "/" ? "bg-white lg:bg-transparent" : "bg-[#222222]"} lg:absolute lg:z-10 lg:w-full lg:max-w-none font-montserrat lg:border-b lg:border-b-[#353535] border-b-[#e9e9e9] border-b`}>

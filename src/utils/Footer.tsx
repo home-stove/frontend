@@ -3,7 +3,7 @@ import { useState } from "react";
 type Props = {};
 
 function Footer({}: Props) {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 900);
+  const [isDesktop] = useState(window.innerWidth >= 900);
   return (
     <footer className="relative font-montserrat bg-[#222222] text-white">
       <div className="px-4 lg:px-8 xl:px-28 4xl:px-40 5xl:px-60 pt-9 pb-5 xl:py-9 5xl:mx-24">

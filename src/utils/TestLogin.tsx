@@ -1,7 +1,7 @@
 type Props = {};
 
 import { useMsal } from "@azure/msal-react";
-import { loginRequest } from "../auth/authConfig.js";
+import { loginRequest } from "../auth/authConfig.ts";
 
 function TestLogin({}: Props) {
   const { instance, accounts } = useMsal();
