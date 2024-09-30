@@ -51,12 +51,12 @@ export default function JobPostingForm() {
 
   const validateForm = () => {
     const newErrors = {}
-    if (!formData.jobTitle) newErrors.jobTitle = 'Job title is required'
-    if (!formData.category) newErrors.category = 'Category is required'
-    if (!formData.quantity) newErrors.quantity = 'Quantity is required'
-    if (!formData.deliveryDate) newErrors.deliveryDate = 'Delivery date is required'
-    if (!formData.email) newErrors.email = 'Email is required'
-    if (formData.email && !/\S+@\S+\.\S+/.test(formData.email)) newErrors.email = 'Email is invalid'
+    if (!formData.jobTitle) Object.assign(newErrors, {jobTitle: 'Job title is required'})
+    if (!formData.category) Object.assign(newErrors, {category: 'Category is required'})
+    if (!formData.quantity) Object.assign(newErrors, {quantity: 'Quantity is required'})
+    if (!formData.deliveryDate) Object.assign(newErrors, {deliveryDate: 'Delivery date is required'})
+    if (!formData.email) Object.assign(newErrors, {email: 'Email is required'})
+    if (formData.email && !/\S+@\S+\.\S+/.test(formData.email)) Object.assign(newErrors, {email: 'Email is invalid'})
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
   }
@@ -80,9 +80,9 @@ export default function JobPostingForm() {
           value={formData.jobTitle}
           onChange={handleInputChange}
           placeholder="Enter job title"
-          className={cn("text-sm xxxxs:text-base", errors.jobTitle && "border-red-500")}
+          className={cn("text-sm xxxxs:text-base", errors?.jobTitle && "border-red-500")}
         />
-        {errors.jobTitle && <p className="text-red-500 text-xs xxxxs:text-sm">{errors.jobTitle}</p>}
+        {errors?.jobTitle && <p className="text-red-500 text-xs xxxxs:text-sm">{errors?.jobTitle}</p>}
       </div>
 
       <div className="space-y-2">
@@ -100,7 +100,7 @@ export default function JobPostingForm() {
       <div className="space-y-2">
         <Label htmlFor="category" className="text-sm xxxxs:text-base">Category/Specialty</Label>
         <Select name="category" onValueChange={(value) => handleSelectChange(value, 'category')}>
-          <SelectTrigger className={cn("text-sm xxxxs:text-base", errors.category && "border-red-500")}>
+          <SelectTrigger className={cn("text-sm xxxxs:text-base", errors?.category && "border-red-500")}>
             <SelectValue placeholder="Select a category" />
           </SelectTrigger>
           <SelectContent>
@@ -110,7 +110,7 @@ export default function JobPostingForm() {
             <SelectItem value="other">Other</SelectItem>
           </SelectContent>
         </Select>
-        {errors.category && <p className="text-red-500 text-xs xxxxs:text-sm">{errors.category}</p>}
+        {errors?.category && <p className="text-red-500 text-xs xxxxs:text-sm">{errors?.category}</p>}
       </div>
 
       <div className="space-y-2">
@@ -122,9 +122,9 @@ export default function JobPostingForm() {
           value={formData.quantity}
           onChange={handleInputChange}
           placeholder="Enter quantity"
-          className={cn("text-sm xxxxs:text-base", errors.quantity && "border-red-500")}
+          className={cn("text-sm xxxxs:text-base", errors?.quantity && "border-red-500")}
         />
-        {errors.quantity && <p className="text-red-500 text-xs xxxxs:text-sm">{errors.quantity}</p>}
+        {errors?.quantity && <p className="text-red-500 text-xs xxxxs:text-sm">{errors?.quantity}</p>}
       </div>
 
       <div className="space-y-2">
@@ -136,7 +136,7 @@ export default function JobPostingForm() {
               className={cn(
                 "w-full justify-start text-left font-normal text-sm xxxxs:text-base",
                 !formData.deliveryDate && "text-muted-foreground",
-                errors.deliveryDate && "border-red-500"
+                errors?.deliveryDate && "border-red-500"
               )}
             >
               <CalendarIcon className="mr-2 h-4 w-4" />
@@ -152,7 +152,7 @@ export default function JobPostingForm() {
             />
           </PopoverContent>
         </Popover>
-        {errors.deliveryDate && <p className="text-red-500 text-xs xxxxs:text-sm">{errors.deliveryDate}</p>}
+        {errors?.deliveryDate && <p className="text-red-500 text-xs xxxxs:text-sm">{errors?.deliveryDate}</p>}
       </div>
 
       <div className="space-y-2">
@@ -200,9 +200,9 @@ export default function JobPostingForm() {
           value={formData.email}
           onChange={handleInputChange}
           placeholder="Enter your email"
-          className={cn("text-sm xxxxs:text-base", errors.email && "border-red-500")}
+          className={cn("text-sm xxxxs:text-base", errors?.email && "border-red-500")}
         />
-        {errors.email && <p className="text-red-500 text-xs xxxxs:text-sm">{errors.email}</p>}
+        {errors?.email && <p className="text-red-500 text-xs xxxxs:text-sm">{errors?.email}</p>}
       </div>
 
       <div className="space-y-2">
