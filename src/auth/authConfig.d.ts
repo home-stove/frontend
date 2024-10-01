@@ -1,4 +1,4 @@
-declare module './authConfig' {
+declare module './authConfig.ts' {
   export const msalConfig: {
     auth: {
       clientId: string;

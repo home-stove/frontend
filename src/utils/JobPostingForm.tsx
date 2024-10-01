@@ -10,6 +10,29 @@ import { format } from "date-fns"
 import { cn } from "@/lib/utils"
 import { Label } from "@/components/ui/label"
 
+// Define the form data types
+interface FormData {
+  jobTitle: string
+  description: string
+  category: string
+  quantity: string
+  deliveryDate: Date | null
+  location: string
+  budgetMin: string
+  budgetMax: string
+  email: string
+  allergyInfo: string
+  specialNotes: string
+}
+
+interface FormErrors {
+  jobTitle?: string
+  category?: string
+  quantity?: string
+  deliveryDate?: string
+  email?: string
+}
+
 export default function JobPostingForm() {
   const [formData, setFormData] = useState({
     jobTitle: '',
@@ -80,7 +103,7 @@ export default function JobPostingForm() {
           value={formData.jobTitle}
           onChange={handleInputChange}
           placeholder="Enter job title"
-          className={cn("text-sm xxxxs:text-base", errors?.jobTitle && "border-red-500")}
+          className={cn("text-sm xxxxs:text-base", errors && "border-red-500")}
         />
         {errors?.jobTitle && <p className="text-red-500 text-xs xxxxs:text-sm">{errors?.jobTitle}</p>}
       </div>
