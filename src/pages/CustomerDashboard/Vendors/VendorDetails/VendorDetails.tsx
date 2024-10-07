@@ -114,7 +114,7 @@ function VendorDetails({}: Props) {
           </div>
           {/* The Hero Section */}
           <div
-            className="px-4 xxs:px-7 md:px-10 xl:px-[4.5rem] 5xl:px-28 py-7 relative md:h-56 xl:h-64 xl:mx-10 5xl:mx-24 xl:rounded-lg md:flex md:items-center"
+            className="px-4 xxs:px-7 md:px-10 xl:px-[4.5rem] 5xl:px-28 py-7 relative md:h-56 xl:h-64 xl:mx-10 5xl:ml-24 xl:rounded-lg md:flex md:items-center"
             style={{
               background:
                 "linear-gradient(90deg, rgba(254,235,229,0.95) 0%, rgba(254,235,221,0.98) 40%, rgba(251,226,195,1) 100%)",
@@ -337,7 +337,7 @@ function VendorDetails({}: Props) {
         </div>
         {/* Contact & Socials Section */}
         <div
-          className="px-4 xxs:px-7 my-9 xl:my-14 py-7 lg:px-10 xl:h-[32rem] xl:rounded-lg xl:sticky xl:top-0 xl:mx-10"
+          className="px-4 xxs:px-7 my-9 xl:my-14 py-7 lg:px-10 xl:h-[32rem] xl:rounded-lg xl:sticky xl:top-0 xl:mx-10 5xl:mr-24"
           style={{
             boxShadow:
               "0px 6px 15px 0px rgba(64.00000000000001, 79.00000000000006, 104.00000000000004, 0.09)",

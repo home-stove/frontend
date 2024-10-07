@@ -4,11 +4,13 @@ import Header from "@/utils/Header";
 import HeroSectionHome from "@/utils/HeroSectionHome";
 import HowItWorksVendor from "@/utils/HowItWorksVendor";
 import JobsByCategorySectionHome from "@/utils/JobsByCategorySectionHome";
+import SlidingMenu from "@/utils/SlidingMenu";
 import TestimonialsVendor from "@/utils/TestimonialsVendor";
 
 function Home() {
   return (
     <div className="relative">
+      <SlidingMenu />
       <div>
         <Header />
       </div>
