@@ -16,8 +16,11 @@ const menuSlice = createSlice({
         toggleMenu(state) {
             state.isOpen = !state.isOpen;
         },
+        resetMenu(state) {
+            state.isOpen = false; // Resetting the menu state
+        },
     },
 });
 
-export const { toggleMenu } = menuSlice.actions;
+export const { toggleMenu, resetMenu } = menuSlice.actions;
 export default menuSlice.reducer;

@@ -8,9 +8,18 @@ import JobPosting from "@/pages/CustomerDashboard/JobPosting/JobPosting";
 import ExploreJobs from "@/pages/VendorDashboard/ExploreJobs/ExploreJobs";
 import JobDetails from "@/pages/VendorDashboard/JobDetails/JobDetails";
 import VendorDetails from "@/pages/CustomerDashboard/Vendors/VendorDetails/VendorDetails";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { resetMenu } from "@/reducers/menuSlice";
 
 function AnimatedRoutes() {
   const location = useLocation();
+  const dispatch = useDispatch();
+  
+  useEffect(() => {
+    dispatch(resetMenu()); // resetting the state of the menu
+  }, [location.pathname]);
+
   return (
     <AnimatePresence mode="wait">
       <Routes location={location} key={location.pathname}>

@@ -89,10 +89,10 @@ const vendors = [
 function VendorCards({}: Props) {
   return (
     <div className="text-[#0c0c0c] my-9">
-      {vendors.map((vendor) => (
+      {vendors.map((vendor, index) => (
         <div
           className="relative text-sm my-7 px-4 py-7 lg:p-8 border border-[#e9e9e9]"
-          key={vendor.id}
+          key={index}
           style={{
             boxShadow:
               "0px 6px 15px 0px rgba(64.00000000000001, 79.00000000000006, 104.00000000000004, 0.09)",
@@ -174,9 +174,9 @@ function VendorCards({}: Props) {
           </div>
           {/* Skills Pills */}
           <div className="flex gap-x-3 pb-5">
-            {vendor.specialties.map((specialty) => (
+            {vendor.specialties.map((specialty, index) => (
               <div
-                key={vendor.id}
+                key={index}
                 className="bg-[#ffede8] h-7 px-2 rounded-3xl flex items-center justify-center"
               >
                 <span className="text-xs">{specialty}</span>

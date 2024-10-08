@@ -1,14 +1,12 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { toggleMenu } from "@/reducers/menuSlice";
-import SlidingMenu from "./SlidingMenu";
 
 type Props = {};
 
 export default function Header({}: Props) {
   const dispatch = useDispatch();
-  const isOpen = useSelector((state: any) => state.menu.isOpen);
   const [isDesktop] = useState(window.innerWidth >= 900);
   const { pathname } = useLocation();
   return (
@@ -40,6 +38,7 @@ export default function Header({}: Props) {
             <div className="ml-2.5">
               <svg
                 onClick={() => dispatch(toggleMenu())}
+                className="cursor-pointer"
                 xmlns="http://www.w3.org/2000/svg"
                 width="2em"
                 height="2em"
