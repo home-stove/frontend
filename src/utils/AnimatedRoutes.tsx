@@ -6,7 +6,7 @@ import TestLogin from "./TestLogin";
 import Vendors from "@/pages/CustomerDashboard/Vendors/Vendors";
 import JobPosting from "@/pages/CustomerDashboard/JobPosting/JobPosting";
 import ExploreJobs from "@/pages/VendorDashboard/ExploreJobs/ExploreJobs";
-import JobDetails from "@/pages/VendorDashboard/JobDetails/JobDetails";
+import JobDetails from "@/pages/VendorDashboard/ExploreJobs/JobDetails/JobDetails";
 import VendorDetails from "@/pages/CustomerDashboard/Vendors/VendorDetails/VendorDetails";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
