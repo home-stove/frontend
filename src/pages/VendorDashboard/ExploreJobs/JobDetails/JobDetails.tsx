@@ -108,7 +108,7 @@ function JobDetails({}: Props) {
           {/* The route for this page */}
           <div className="px-4 md:px-10 py-5">
             <p className="text-sm text-[#0c0c0c]">
-              Home / Vendors
+              Home / Jobs
               <span className="text-[#a2a2a2]"> / {bakerProfile.name}</span>
             </p>
           </div>
