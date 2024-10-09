@@ -86,6 +86,11 @@ function SlidingMenu({}: Props) {
                   <h1 className="text-sm">Explore Vendors</h1>
                 </Link>
               </div>
+              <div>
+                <Link to="/customer-dashboard/post-a-job">
+                  <h1 className="text-sm">Post a Job</h1>
+                </Link>
+              </div>
             </div>
             <div className="flex flex-col gap-y-6 pl-7 pr-4 py-7">
               <div>
