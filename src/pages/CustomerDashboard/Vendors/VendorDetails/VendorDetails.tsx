@@ -326,11 +326,13 @@ function VendorDetails({}: Props) {
             <div className="my-9 border-b w-full"></div>
           </div>
           {/* Reviews Section */}
-          <div className="px-4 xxs:px-7 my-9 lg:px-10 5xl:px-24">
-            <h2 className="text-xl text-[#0c0c0c] font-semibold pb-5">
-              Recent Reviews
-            </h2>
-            <ReviewCards reviews={bakerProfile.reviews} />
+          <div className="">
+            <div className="px-4 xxs:px-7 my-9 lg:px-10 5xl:px-24">
+              <h2 className="text-xl text-[#0c0c0c] font-semibold pb-5">
+                Recent Reviews
+              </h2>
+              <ReviewCards reviews={bakerProfile.reviews} />
+            </div>
             <ReviewForm />
             <div className="my-9 border-b w-full"></div>
           </div>

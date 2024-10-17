@@ -11,7 +11,7 @@ type Props = {
 
 function ReviewCards({ reviews }: Props) {
   return (
-    <div>
+    <div className="">
       {reviews.map((review, index) => (
         <div key={index} className={`w-72 md:w-auto ${index !== 0 && "my-5"}`}>
           <div className="flex gap-x-3">

@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 
 type Props = {};
@@ -92,11 +93,13 @@ function JobsByCategorySectionHome({}: Props) {
             </motion.div>
           ))}
         </div>
+        <Link to={"/baker-dashboard/explore-jobs"}>
         <div className="h-11 w-52 -mt-3 xl:mt-4 xl:mx-auto">
           <button className="w-full h-full text-white font-semibold bg-[#26ae61] rounded">
             View All Listings
           </button>
         </div>
+        </Link>
       </div>
     </section>
   );

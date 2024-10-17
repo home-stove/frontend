@@ -11,7 +11,7 @@ type Props = {
 function BidForm({min, max}: Props) {
   
   return (
-    <div className="w-full mx-auto md:mx-0 space-y-4 bg-white xxxxs:w-[340px] xxxs:w-[355px] xxs:w-[370px] xs:w-[390px] sm:w-[410px] md:w-full">
+    <div className="px-1.5 xxs:px-4 sm:px-[1.125rem] md:px-7 lg:px-10 w-full mx-auto md:mx-0 space-y-4 bg-white xxxxs:w-[340px] xxxs:w-[355px] xxs:w-[370px] xs:w-[390px] sm:w-[410px] md:w-full">
       <h2 className="text-xl font-bold">Make Your Bid</h2>
 
       <div className="space-y-2">

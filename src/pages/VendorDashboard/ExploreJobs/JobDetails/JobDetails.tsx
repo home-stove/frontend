@@ -70,7 +70,7 @@ function JobDetails({}: Props) {
       <div>
         <Header />
       </div>
-      <main className="relative font-montserrat lg:pt-20 xl:flex">
+      <main className="relative font-montserrat lg:pt-20 xl:px-32">
         {/* The route for this page */}
         <div className="px-4 md:px-10 py-5">
           <p className="text-sm text-[#0c0c0c]">
@@ -139,7 +139,7 @@ function JobDetails({}: Props) {
         <div className="grid grid-cols-2 grid-rows-2 gap-y-4 md:gap-6 gap-x-1 my-9 px-4 xxs:px-7 lg:px-10 5xl:px-24">
           <div className="flex gap-x-2 items-center">
             <img
-              className="h-8 w-8"
+              className="h-10 w-10"
               src="https://storagehomestovedev.blob.core.windows.net/web/dollar.png?sp=r&st=2024-10-14T17:29:52Z&se=2025-10-15T01:29:52Z&spr=https&sv=2022-11-02&sr=b&sig=DMxGiS3IINiWYTSPqw7hEqb54X9GkXVqU8Q3knAwpM4%3D"
               alt="location pin"
             />
@@ -153,8 +153,8 @@ function JobDetails({}: Props) {
           <div className="flex gap-x-2 items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="2em"
-              height="2em"
+              width="2.5em"
+              height="2.5em"
               viewBox="0 0 24 24"
             >
               <path
@@ -173,7 +173,7 @@ function JobDetails({}: Props) {
           </div>
           <div className="flex gap-x-2 items-center">
             <img
-              className="h-8 w-8"
+              className="h-10 w-10"
               src="https://storagehomestovedev.blob.core.windows.net/web/pin%20(2).png?sp=r&st=2024-09-20T15:19:45Z&se=2025-09-20T23:19:45Z&spr=https&sv=2022-11-02&sr=b&sig=oNWzdfb8HPWnJT1YvWtqqUaFg%2Fzd0WLWwPODJMgP54Y%3D"
               alt="location pin"
             />
@@ -189,8 +189,8 @@ function JobDetails({}: Props) {
           <div className="flex gap-x-2 items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="2em"
-              height="2em"
+              width="2.5em"
+              height="2.5em"
               viewBox="0 0 15 15"
             >
               <path
@@ -290,7 +290,7 @@ function JobDetails({}: Props) {
           </div>
           <div className="my-9 border-b w-full"></div>
         </div>
-        <div className="px-4 xxs:px-7 my-9 lg:px-10 5xl:px-24">
+        <div className="">
           <BidForm min={jobDetails.budgetRange.min} max={jobDetails.budgetRange.max} />
           <div className="my-9 border-b w-full"></div>
         </div>
