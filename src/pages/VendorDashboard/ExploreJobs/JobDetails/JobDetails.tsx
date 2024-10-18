@@ -70,9 +70,9 @@ function JobDetails({}: Props) {
       <div>
         <Header />
       </div>
-      <main className="relative font-montserrat lg:pt-20 xl:px-32">
+      <main className="relative font-montserrat lg:pt-20 xl:px-40 5xl:px-80">
         {/* The route for this page */}
-        <div className="px-4 md:px-10 py-5">
+        <div className="px-4 md:px-10 5xl:px-24 py-5">
           <p className="text-sm text-[#0c0c0c]">
             Home / Vendors
             <span className="text-[#a2a2a2]"> / {jobDetails.jobTitle}</span>
@@ -292,7 +292,7 @@ function JobDetails({}: Props) {
         </div>
         <div className="">
           <BidForm min={jobDetails.budgetRange.min} max={jobDetails.budgetRange.max} />
-          <div className="my-9 border-b w-full"></div>
+          <div className="my-9 border-b w-full xl:mx-auto xl:w-11/12"></div>
         </div>
       </main>
       <div>
