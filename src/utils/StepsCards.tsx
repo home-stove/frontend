@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 type Props = {};
 
 const steps: {
@@ -45,9 +47,16 @@ const steps: {
 
 function StepsCards({}: Props) {
   return (
-    <div className="md:grid md:grid-cols-3 md:grid-rows-2 md:gap-x-6 xl:gap-x-8">
+    <motion.div
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 0.99 }}
+      transition={{ delay: 1, ease: "easeOut", duration: 0.5 }}
+      viewport={{ once: true }}
+      className="md:grid md:grid-cols-3 md:grid-rows-2 md:gap-x-6 xl:gap-x-8"
+    >
       {steps.map((step) => (
-        <div
+        <motion.div
+          whileHover={{ scale: 1.1 }}
           className={`rounded-lg my-3.5 p-3 lg:p-4 xl:p-6 bg-white h-44 md:h-60 lg:h-44 xl:h-56 w-72 xxxxs:w-80 xxxs:w-[21rem] xs:w-[23rem] md:w-56 lg:w-[17rem] xl:w-72 3xl:w-80 flex flex-col justify-around`}
           style={{
             boxShadow:
@@ -64,9 +73,9 @@ function StepsCards({}: Props) {
           <div>
             <p className="text-sm tracking-wider">{step.description}</p>
           </div>
-        </div>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 }
 

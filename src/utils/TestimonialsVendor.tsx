@@ -6,6 +6,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
+import { motion } from "framer-motion";
 
 type Props = {};
 
@@ -54,6 +55,11 @@ const testimonials = [
 
 function TestimonialsVendor({}: Props) {
   return (
+    <motion.div
+            initial={{y: 50, opacity: 0}}
+        whileInView={{y: 0, opacity: .99}}
+        transition={{delay: 0.5, ease: "easeOut", duration: 0.5}}
+        viewport={{once: true}}>
     <section className="relative py-9 md:py-11 lg:py-14 xl:py-20 5xl:py-24 px-4 md:px-24 xl:px-44 3xl:px-60 5xl:px-[30rem] font-montserrat text-[#0c0c0c] 5xl:h-[70vh] 5xl:flex 5xl:justify-center 5xl:items-center">
       <div>
         <div>
@@ -109,6 +115,7 @@ function TestimonialsVendor({}: Props) {
         </div>
       </div>
     </section>
+    </motion.div>
   );
 }
 
