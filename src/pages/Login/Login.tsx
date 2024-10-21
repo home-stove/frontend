@@ -112,7 +112,13 @@ function Login() {
           </div>
         </div>
       </div>
-      <div className="flex flex-col h-full lg:w-1/2 px-6 md:px-16 lg:px-12 xl:px-36 2xl:px-44 5xl:px-60 pt-24 xxxxs:pt-14 xxxs:pt-4 xxs:pt-20 xs:pt-28 lg:pt-0 md:mt-10 lg:mt-0 xl:mt-auto font-montserrat">
+      <motion.div
+        initial={{ y: 50, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 0.99 }}
+        transition={{ delay: 1, ease: "easeOut", duration: 0.5 }}
+        viewport={{ once: true }}
+        className="flex flex-col h-full lg:w-1/2 px-6 md:px-16 lg:px-12 xl:px-36 2xl:px-44 5xl:px-60 pt-24 xxxxs:pt-14 xxxs:pt-4 xxs:pt-20 xs:pt-28 lg:pt-0 md:mt-10 lg:mt-0 xl:mt-auto font-montserrat"
+      >
         <h1 className="text-2xl md:text-3xl xl:text-2xl 2xl:text-3xl font-semibold lg:mt-auto">
           Login
         </h1>
@@ -155,8 +161,26 @@ function Login() {
             </>
           ) : (
             <>
-            <svg className="mt-8 w-6 h-6" onClick={handleLogin} xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 256 256"><path fill="#f1511b" d="M121.666 121.666H0V0h121.666z"></path><path fill="#80cc28" d="M256 121.666H134.335V0H256z"></path><path fill="#00adef" d="M121.663 256.002H0V134.336h121.663z"></path><path fill="#fbbc09" d="M256 256.002H134.335V134.336H256z"></path></svg>
-            <p>Login with Microsoft</p>
+              <svg
+                className="mt-8 w-6 h-6"
+                onClick={handleLogin}
+                xmlns="http://www.w3.org/2000/svg"
+                width="1em"
+                height="1em"
+                viewBox="0 0 256 256"
+              >
+                <path fill="#f1511b" d="M121.666 121.666H0V0h121.666z"></path>
+                <path fill="#80cc28" d="M256 121.666H134.335V0H256z"></path>
+                <path
+                  fill="#00adef"
+                  d="M121.663 256.002H0V134.336h121.663z"
+                ></path>
+                <path
+                  fill="#fbbc09"
+                  d="M256 256.002H134.335V134.336H256z"
+                ></path>
+              </svg>
+              <p>Login with Microsoft</p>
             </>
           )}
         </div>
@@ -176,7 +200,7 @@ function Login() {
             &copy; <Link to={"/"}>Home Stove</Link> - All Rights Reserved.
           </p>
         )}
-      </div>
+      </motion.div>
       {!isNotMobile && (
         <p className="text-xs md:text-sm xl:text-xs 2xl:text-sm self-center p-5 font-montserrat">
           &copy; <Link to={"/"}>Home Stove</Link> - All Rights Reserved.
