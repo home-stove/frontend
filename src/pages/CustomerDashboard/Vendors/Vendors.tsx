@@ -3,6 +3,7 @@ import Footer from "@/utils/Footer";
 import Header from "@/utils/Header";
 import VendorCards from "@/utils/VendorCards";
 import VendorsFilterSection from "@/utils/VendorsFilterSection";
+import { motion } from "framer-motion";
 import { useState } from "react";
 
 type Props = {};
@@ -23,6 +24,12 @@ function Vendors({}: Props) {
           </p>
         </div>
         {/* The Hero Section */}
+        <motion.div 
+         initial={{ y: 50, opacity: 0 }}
+         whileInView={{ y: 0, opacity: 0.99 }}
+         transition={{ delay: 0.5, ease: "easeOut", duration: 0.5 }}
+         viewport={{ once: true }}
+        >
         <div
           className="px-4 md:px-10 xl:px-[4.5rem] 5xl:px-28 md:pr-96 py-9 relative xl:h-80 xl:mx-10 5xl:mx-24 xl:rounded-lg"
           style={{
@@ -59,6 +66,7 @@ function Vendors({}: Props) {
             </div>
           </div>
         </div>
+        </motion.div>
         {/* The Bakers list section */}
         <div className="px-4 md:px-10 py-7 lg:py-14 xl:py-20 5xl:py-24 5xl:px-52 xl:px-28 lg:flex lg:gap-x-14">
           <div className="pb-4 lg:w-1/4 mb-7">

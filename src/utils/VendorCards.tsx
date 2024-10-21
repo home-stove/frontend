@@ -1,4 +1,5 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 type Props = {};
@@ -90,6 +91,12 @@ function VendorCards({}: Props) {
   return (
     <div className="text-[#0c0c0c] my-9">
       {vendors.map((vendor, index) => (
+         <motion.div 
+         initial={{ y: 50, opacity: 0 }}
+         whileInView={{ y: 0, opacity: 0.99 }}
+         transition={{ delay: 0.5, ease: "easeOut", duration: 0.5 }}
+         viewport={{ once: true }}
+         key={index}>
         <div
           className="relative text-sm my-7 px-4 py-7 lg:p-8 border border-[#e9e9e9]"
           key={index}
@@ -193,6 +200,7 @@ function VendorCards({}: Props) {
             </Link>
           </div>
         </div>
+        </motion.div>
       ))}
     </div>
   );

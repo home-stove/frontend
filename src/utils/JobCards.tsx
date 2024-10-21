@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
 type Props = {};
@@ -143,6 +144,12 @@ function JobCards({}: Props) {
   return (
     <div className="text-[#0c0c0c] my-9">
       {jobs.map((job, index) => (
+      <motion.div 
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 0.99 }}
+      transition={{ delay: 0.5, ease: "easeOut", duration: 0.5 }}
+      viewport={{ once: true }}
+      key={index}>
         <div
           className="relative text-sm my-7 px-4 py-7 lg:p-8 border border-[#e9e9e9]"
           key={index}
@@ -254,6 +261,7 @@ function JobCards({}: Props) {
             </div>
           </div>
         </div>
+        </motion.div>
       ))}
     </div>
   );
